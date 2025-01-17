@@ -67,7 +67,7 @@ const App = () => {
       </div>
 
       <div className={`flex-1 transition-all duration-300
-        ${sideBar ? "ml-12 min-[380px]:ml-16 sm:ml-[25%] md:ml-[16.67%] xl:ml-[8.33%]" : ""}`}>
+        ${sideBar ? "ml-12  sm:ml-[25%] md:ml-[16.67%] xl:ml-[8.33%]" : ""}`}>
         <Background>
           <div
             id="contact"

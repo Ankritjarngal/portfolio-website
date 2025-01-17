@@ -6,7 +6,6 @@ import github2 from "../src/assets/pngwing.com (1).png";
 import linkedin from "../src/assets/pngwing.com (3).png";
 import mail from "../src/assets/pngwing.com (4).png";
 import instagram from "../src/assets/pngwing.com (7).png";
-import {MailSection} from "../components/MailSection"
 
 export function Topbar({ children }) {
   return (
@@ -40,9 +39,13 @@ export function Topbar({ children }) {
           link="https://www.instagram.com/ankrit.jarngal"
           className="w-8 h-8 sm:w-10 sm:h-10 hover:scale-110 transition-transform duration-200"
         />
-        <div className="mb-2 flex justify-center items-center sm:mb-0 sm:absolute sm:left-1/2 sm:-translate-x-1/2">
-                <MailSection />
-            </div>
+        <TopBarSection 
+          title={mail} 
+          alt="mail" 
+          link="mailto:ankrit4c@gmail.com"
+          className="w-8 h-8 sm:w-10 sm:h-10 hover:scale-110 transition-transform duration-200"
+        />
+         
       </div>
     </div>
   );
