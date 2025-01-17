@@ -1,41 +1,41 @@
 import React from 'react';
 import { HeaderBox } from '../components/HeaderBox';
-import { PerProject}  from '../components/PerProject'
-
+import { PerProject } from '../components/PerProject';
 
 export function Projects() {
   return (
-   <div>
-    <HeaderBox title="Projects" number={2}></HeaderBox>
-    <PerProject 
-    title="QR Scanner" 
-    text="A lightweight and intuitive application for scanning and decoding QR codes. It supports multiple formats and provides real-time scanning using your device's camera. Ideal for inventory management, event check-ins, and everyday use." 
-    skills={["React", "JavaScript", "HTML5", "CSS3"]} 
-/>
+    <div>
+      <HeaderBox title="Projects" number={2} />
+      <PerProject
+        title="QR Code Scanner"
+        text="Developed a full-stack system for scanning and managing participant data during Techvaganza 2024. This project implemented real-time participant tracking and data management functionality, showcasing proficiency in full-stack development and event management systems."
+        projectLink="https://qr-code-scanner-sand.vercel.app"
+        skills={["HTML", "CSS", "JavaScript", "Node.js", "Express", "PostgreSQL", "Vercel"]
+            
+            
+        }
+      />
+      
+      <PerProject
+        title="Onsite Registration System"
+        text="Created a comprehensive full-stack system for real-time participant registration. It features efficient data entry, management capabilities, and robust backend infrastructure handling concurrent registrations, with a user-friendly interface for streamlined registration."
+        skills={["HTML", "CSS", "JavaScript", "Node.js", "PostgreSQL", "Express"]}
+        projectLink="https://github.com/Ankritjarngal/module
+"
+      />
 
-<PerProject 
-    title="Task Manager" 
-    text="A fully responsive web application designed to help users organize, prioritize, and track their daily tasks efficiently. Features include drag-and-drop task reordering, deadlines, reminders, and synchronization across devices." 
-    skills={["React", "Redux", "Node.js", "MongoDB"]} 
-/>
+      <PerProject
+        title="Paytm Wallet"
+        text="Developed a Paytm Wallet system using ReactJS, Node.js, Express, and JWT for authentication. Features secure user authentication, seamless transaction handling, and robust error validation, leveraging Zod for data validation."
+        skills={["ReactJS", "Node.js", "Express", "JWT", "Zod", "MongoDB"]}
+        projectLink="https://github.com/Ankritjarngal/Paytm-Wallet"
+      />
 
-<PerProject 
-    title="Blog Platform" 
-    text="An interactive blogging platform that allows users to create, edit, and share posts seamlessly. Includes features like user authentication, rich text editing, comment sections, and tag-based post categorization for improved discoverability." 
-    skills={["Next.js", "TypeScript", "Firebase", "Tailwind CSS"]} 
-/>
-
-<PerProject 
-    title="Fitness Tracker" 
-    text="A mobile app built to track and analyze workouts, monitor diet plans, and log daily progress. Features include customizable workout routines, calorie counting, hydration tracking, and visual progress charts for motivation." 
-    skills={["React Native", "Expo", "SQLite", "APIs"]} 
-/>
-
-<PerProject 
-    title="Crypto Tracker" 
-    text="A dynamic and visually appealing dashboard that provides real-time updates on cryptocurrency prices and trends. Includes features like watchlists, historical data visualization, market news, and portfolio management tools for crypto enthusiasts." 
-    skills={["Vue.js", "D3.js", "Axios", "Chart.js"]} 
-/>
-   </div>
+      <PerProject
+        title="Portfolio Website"
+        text="Built my personal portfolio website to showcase my skills, projects, and achievements. The site features a modern, responsive design with smooth navigation and a user-friendly interface."
+        skills={["ReactJS", "JavaScript", "Tailwind CSS"]}
+      />
+    </div>
   );
 }

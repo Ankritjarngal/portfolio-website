@@ -6,11 +6,27 @@ export function About() {
     <div className="w-full max-w-3xl">
       <HeaderBox title="About Me!" number={1} />
       <Written
-        data={`Hi! My name is [Your Name], and I live in [City, Country]. I’m currently pursuing my studies at [Your School/University Name], focusing on [Your Field of Study].
+        data={`Hi, I'm Ankrit Jarngal, an aspiring web developer from Hirangar, Jammu and Kashmir. I am currently in my 2nd year of the Computer Science program at the National Institute of Technology, Srinagar.
 
-Living in [City], I’ve grown to appreciate [something unique about your city, e.g., "its vibrant culture" or "peaceful environment"]. As a student of [Your Field of Study], I’m passionate about exploring [specific interests within your field, e.g., "technology trends", "creative problem-solving", or "innovative solutions"].
+Skills:
+- Frontend: HTML, CSS, JavaScript, ReactJS, TypeScript
+- Backend: Node.js, Express
+- Databases: MongoDB, PostgreSQL
+- Version Control: Git, GitHub
+- Authentication: JWT Authentication
 
-When I’m not studying, I enjoy [your hobbies/interests, e.g., "reading books", "hiking", "experimenting with new recipes", or "playing games"]. These activities help me stay balanced and bring fresh perspectives to my academic journey.`}
+Others:
+- JSON, JSONBin
+- API Integration
+- RESTful APIs
+
+Middleware:
+- Generic Middlewares: Authentication, Authorization, Request Validation
+- Libraries: Zod, JWT, CORS, Express-Session
+- Error Handling: Custom Error Responses, Async Error Handling
+
+I am passionate about building responsive websites and web applications, always eager to learn and grow in the field of web development.
+`}
       />
     </div>
   );
