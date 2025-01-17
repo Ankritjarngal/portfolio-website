@@ -48,18 +48,26 @@ const App = () => {
     }
   }, [largeScreen]);
 
+  const handleSidebarClick = () => {
+    if (!largeScreen) {
+      setSideBar(false);
+      setButton(true);
+    }
+  };
+
   return (
     <div className="relative flex min-h-screen bg-[#1A202C]">
       <div
         className={`fixed left-0 top-0 h-full bg-[#1A202C] transform transition-transform duration-300 ease-in-out
-          w-16 sm:w-3/12 md:w-2/12 xl:w-1/12
+          w-12 min-[380px]:w-16 sm:w-3/12 md:w-2/12 xl:w-1/12
           ${sideBar ? "translate-x-0" : "-translate-x-full"}`}
+        onClick={handleSidebarClick}
       >
         <Sidebar />
       </div>
 
       <div className={`flex-1 transition-all duration-300
-        ${sideBar ? "ml-16 sm:ml-[25%] md:ml-[16.67%] xl:ml-[8.33%]" : ""}`}>
+        ${sideBar ? "ml-12 min-[380px]:ml-16 sm:ml-[25%] md:ml-[16.67%] xl:ml-[8.33%]" : ""}`}>
         <Background>
           <div
             id="contact"
