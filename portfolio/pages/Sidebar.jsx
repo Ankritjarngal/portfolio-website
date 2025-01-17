@@ -46,7 +46,7 @@ export function Sidebar() {
   return (
     <div
       onMouseMove={handleMouseMove}
-      className="relative h-full overflow-hidden  bg-[#1A202C] scale-x-100 transition-all duration-200"
+      className="relative h-full overflow-hidden  bg-[#1A202C] scale-x-100 transition-all duration-200 "
     >
       <div
         style={{
