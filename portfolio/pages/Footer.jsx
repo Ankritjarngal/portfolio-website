@@ -26,7 +26,7 @@ export function Footer() {
   return (
     <div className="bg-[#0F141A] flex items-center justify-center w-full flex-col p-2">
       <div className="text-gray-400 py-3">
-       Suggestions?Feedback
+       Suggestions?Feedback?
       </div>
       <p className="text-gray-300 py-1">All Suggestions are Welcomed</p>
       <div className="flex items-center justify-center flex-col">
