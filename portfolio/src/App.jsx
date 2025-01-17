@@ -59,7 +59,7 @@ const App = () => {
     <div className="relative flex min-h-screen bg-[#1A202C]">
       <div
         className={`fixed left-0 top-0 h-full bg-[#1A202C] transform transition-transform duration-300 ease-in-out
-          w-22 sm:w-3/12 md:w-2/12 xl:w-1/12 z-20
+          w-22 select-none cursor-default sm:w-3/12 md:w-2/12 xl:w-1/12 z-20
           ${sideBar ? "translate-x-0" : "-translate-x-full"}`}
         onClick={handleSidebarClick}
       >
@@ -71,7 +71,7 @@ const App = () => {
         <Background>
           <div
             id="contact"
-            className={`transition-transform duration-500 
+            className={`transition-transform duration-500 select-none cursor-default
               ${isTopbarVisible ? "translate-y-0" : "-translate-y-full"}`}
           >
             <Topbar>
