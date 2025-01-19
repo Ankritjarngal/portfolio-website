@@ -21,7 +21,7 @@ const requestOptions = {
   redirect: "follow"
 };
 
-fetch(`https://api.jsonbin.io/v3/b/${BIN_ID}`, requestOptions)
+fetch(`https://api.jsonbin.io/v3/b/67897eb4e41b4d34e4788c2d`, requestOptions)
   .then((response) => response.text())
   .then((result) => {console.log(result)
   setMsg("");
