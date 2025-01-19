@@ -1,7 +1,7 @@
 import { useState } from "react";
-import { KEY } from "../KEY";
-import { BIN_ID } from "../KEY";
-
+require('dotenv').config();
+const KEY=process.env.KEY
+const BIN_ID=process.env.BIN_ID
 export function Footer() {
   const [msg, setMsg] = useState("");
 
