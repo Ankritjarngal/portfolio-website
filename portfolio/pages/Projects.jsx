@@ -25,6 +25,14 @@ export function Projects() {
             projectLink="https://github.com/Ankritjarngal/module"
           />
         </div>
+        <div className="transform hover:scale-[1.02] transition-all">
+          <PerProject
+            title="Http server from scratch in C"
+            text="Developed an HTTP server from scratch in C using WinSock. Supports GET, POST, PUT, and DELETE methods with dynamic request handling. Features  request parsing, and structured logging. Implements  response generation for a reliable web server experience."
+            skills = {["C", "WinSock", "HTTP", "Socket Programming", "Networking", "Systems Programming"]}
+            projectLink="https://github.com/Ankritjarngal/http-server-from-scratch-in-c"
+          />
+        </div>
 
         <div className="transform hover:scale-[1.02] transition-all">
           <PerProject
