@@ -8,16 +8,22 @@ import { Projects } from "../pages/Projects";
 import { Experience } from "../pages/Experience";
 import debounce from "lodash.debounce";
 
-const App = () => {
+export default function App() {
+  const [preLoader, setPreLoader] = useState(true);
   const [largeScreen, setLargeScreen] = useState(window.innerWidth > 786);
   const [sideBar, setSideBar] = useState(false);
   const [button, setButton] = useState(!largeScreen);
   const [isTopbarVisible, setIsTopbarVisible] = useState(false);
 
   const handleResize = debounce(() => {
-    const isLarge = window.innerWidth > 786;
-    setLargeScreen(isLarge);
+    setLargeScreen(window.innerWidth > 786);
   }, 250);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setPreLoader(false);
+    }, 1000);
+  }, []);
 
   useEffect(() => {
     setIsTopbarVisible(true);
@@ -55,6 +61,14 @@ const App = () => {
     }
   };
 
+  if (preLoader) {
+    return (
+      <div className="h-screen w-screen flex items-center justify-center bg-[#1A202C]">
+        <div className="w-16 h-16  bg-[#38A169] rounded-full animate-ping"></div>
+      </div>
+    );
+  }
+
   return (
     <div className="relative flex min-h-screen bg-[#1A202C]">
       <div
@@ -66,8 +80,7 @@ const App = () => {
         <Sidebar />
       </div>
 
-      <div className={`flex-1 transition-all duration-300
-        ${sideBar ? "ml-12  sm:ml-[25%] md:ml-[16.67%] xl:ml-[12%]" : ""}`}>
+      <div className={`flex-1 transition-all duration-300 ${sideBar ? "ml-12 sm:ml-[25%] md:ml-[16.67%] xl:ml-[12%]" : ""}`}>
         <Background>
           <div
             id="contact"
@@ -114,4 +127,3 @@ const App = () => {
   );
 };
 
-export default App;
