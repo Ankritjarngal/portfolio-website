@@ -1,12 +1,4 @@
 {
-  "builds": [
-    {
-      "src": "src/index.js",
-      "use": "@vercel/node"
-    }
-  ],
-  "routes": [
-    { "src": "/sitemap.xml", "dest": "/public/sitemap.xml" },
-    { "src": "/(.*)", "dest": "/index.html" }
-  ]
-}
+    "rewrites": [{ "source": "/(.*)", "destination": "/" }]
+  }
+  
