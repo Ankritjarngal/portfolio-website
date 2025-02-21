@@ -67,17 +67,7 @@ export function Footer() {
         </button>
       </div>
 
-      {/* Display the list of suggestions */}
-      <div className="w-full mt-4 px-4">
-        <h3 className="text-gray-300 text-lg font-semibold mb-2">Previous Suggestions:</h3>
-        <ul className="text-gray-400 text-sm space-y-1">
-          {suggestions.map((suggestion, index) => (
-            <li key={index} className="bg-gray-800 px-3 py-1 rounded-md shadow-sm">
-              {suggestion}
-            </li>
-          ))}
-        </ul>
-      </div>
+      
 
       <p className="text-gray-300 py-1">Made by Ankrit 🐒</p>
     </div>
