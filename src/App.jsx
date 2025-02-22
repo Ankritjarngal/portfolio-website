@@ -115,14 +115,7 @@ export default function App() {
               </div>
             </div>
 
-            <div className="flex justify-center mt-6 space-x-4">
-              <button className="px-6 py-2 bg-[#00B8A9] text-white rounded-lg shadow-md hover:bg-[#038C7F] transition-all duration-200 text-sm sm:text-base">
-                Resume
-              </button>
-              <button className="px-6 py-2 bg-[#00B8A9] text-white rounded-lg shadow-md hover:bg-[#038C7F] transition-all duration-200 text-sm sm:text-base">
-                Toggle
-              </button>
-            </div>
+            
 
             <div id="footer" className="mt-6 w-full">
               <Footer />
