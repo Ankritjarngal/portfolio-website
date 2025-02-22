@@ -14,35 +14,16 @@ export default function App() {
   const [sideBar, setSideBar] = useState(false);
   const [button, setButton] = useState(!largeScreen);
   const [isTopbarVisible, setIsTopbarVisible] = useState(false);
-  const [hasLoaded, setHasLoaded] = useState(false);
 
   const handleResize = debounce(() => {
     setLargeScreen(window.innerWidth > 786);
   }, 250);
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      if (hasLoaded) {
-        setPreLoader(false);
-      }
-    }, 1500);
-
-    const handleLoad = () => {
-      setHasLoaded(true);
+    setTimeout(() => {
       setPreLoader(false);
-    };
-
-    if (document.readyState === "complete") {
-      handleLoad();
-    } else {
-      window.addEventListener("load", handleLoad);
-    }
-    
-    return () => {
-      clearTimeout(timer);
-      window.removeEventListener("load", handleLoad);
-    };
-  }, [hasLoaded]);
+    }, 1500);
+  }, []);
 
   useEffect(() => {
     setIsTopbarVisible(true);
@@ -83,10 +64,7 @@ export default function App() {
   if (preLoader) {
     return (
       <div className="h-screen w-screen flex items-center justify-center bg-[#1A202C]">
-        <div className="relative w-16 h-16">
-          <div className="absolute inset-0 w-full h-full bg-[#38A169] rounded-full animate-[ping_1.5s_infinite]"></div>
-          
-        </div>
+        <div className="w-16 h-16  bg-[#38A169] rounded-full animate-ping"></div>
       </div>
     );
   }
@@ -147,4 +125,5 @@ export default function App() {
       </div>
     </div>
   );
-}
+};
+
