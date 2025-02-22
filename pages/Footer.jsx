@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 
+
 const BIN_ID = import.meta.env.VITE_BIN_ID;
 const MASTER_KEY = "$2a$10$W2OGFetenZrmWMylbn7jEu8U4HNgt/slfhl7QgPCjPBHh9J7Zv4Wu";
 const BIN_URL = `https://api.jsonbin.io/v3/b/${BIN_ID}`;
