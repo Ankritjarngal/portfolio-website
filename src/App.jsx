@@ -92,7 +92,7 @@ export default function App() {
                     setSideBar(!sideBar);
                     setButton(!button);
                   }}
-                  className="w-12 h-12 bg-[#1A202C] rounded-lg transition-all duration-200 flex items-center justify-center shadow-lg border-2 border-[#1A202C] hover:border-[#00B8A9] hover:border-3 hover:shadow-sm hover:h-[45px] hover:w-[75px] hover:scale-105"
+                  className="fixed top-4 left-4 w-12 h-12 bg-[#1A202C] rounded-lg transition-all duration-200 flex items-center justify-center shadow-lg border-2 border-[#1A202C] hover:border-[#00B8A9] hover:border-3 hover:shadow-sm hover:h-[45px] hover:w-[75px] hover:scale-105 z-50"
                 >
                   <div className="w-6 h-1 bg-white rounded-full"></div>
                 </div>
@@ -113,6 +113,15 @@ export default function App() {
               <div id="experience" className="w-full md:max-w-3xl mt-6 flex justify-end ml-auto mr-6">
                 <Experience />
               </div>
+            </div>
+
+            <div className="flex justify-center mt-6 space-x-4">
+              <button className="px-6 py-2 bg-[#00B8A9] text-white rounded-lg shadow-md hover:bg-[#038C7F] transition-all duration-200 text-sm sm:text-base">
+                Resume
+              </button>
+              <button className="px-6 py-2 bg-[#00B8A9] text-white rounded-lg shadow-md hover:bg-[#038C7F] transition-all duration-200 text-sm sm:text-base">
+                Toggle
+              </button>
             </div>
 
             <div id="footer" className="mt-6 w-full">
