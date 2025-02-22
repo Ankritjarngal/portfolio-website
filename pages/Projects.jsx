@@ -61,6 +61,7 @@ export function Projects() {
             text="Built my personal portfolio website to showcase my skills, projects, and achievements. The site features a modern, responsive design with smooth navigation and a user-friendly interface."
             skills={["ReactJS", "JavaScript", "Tailwind CSS"]}
             liveLink="https://portfolio-ankrit.versel.app/"
+            projectLink="https://github.com/Ankritjarngal/portfolio-website"
           />
         </div>
       </div>
