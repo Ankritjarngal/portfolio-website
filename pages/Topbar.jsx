@@ -1,52 +1,55 @@
-import React from "react";
-import { TopBarSection } from "../components/TopBarSections";
+import React, { useState, useEffect } from "react";
 import { Resume } from "../components/Resume";
-import Profile from "../src/assets/Profile.jpg";
-import github2 from "../src/assets/pngwing.com (1).png";
-import linkedin from "../src/assets/pngwing.com (3).png";
-import mail from "../src/assets/pngwing.com (4).png";
-import instagram from "../src/assets/pngwing.com (7).png";
+import { Github, Linkedin, Instagram, Mail } from "lucide-react";
 
 export function Topbar({ children }) {
+  const [isTopbarVisible, setIsTopbarVisible] = useState(true);
+  const [hoveredIcon, setHoveredIcon] = useState(null);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsTopbarVisible(window.scrollY < 50);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const SocialIcon = ({ icon: Icon, link, label, color, initialColor }) => (
+    <div
+      onClick={() => window.open(link, "_blank")}
+      onMouseEnter={() => setHoveredIcon(label)}
+      onMouseLeave={() => setHoveredIcon(null)}
+      className="p-2 rounded-full cursor-pointer transition-all duration-300 hover:bg-white/10 hover:scale-110"
+    >
+      <Icon size={28} color={hoveredIcon === label ? color : initialColor} strokeWidth={1.5} />
+    </div>
+  );
+
   return (
-    <div className="flex flex-col sm:flex-row justify-between items-center bg-[#151A23]/30 p-2 sm:p-3">
-      <div className="flex w-full sm:w-auto justify-between items-center mb-2 sm:mb-0">
-        <div className={`${children ? "mr-4 sm:mr-6 md:mr-8" : "mr-0"}`}>
+    <>
+      <div className="flex flex-col sm:flex-row justify-between items-center p-4 bg-gray-900/30 shadow-md border-b border-gray-800">
+        <div className="flex items-center gap-6">
+          <Resume />
           {children}
         </div>
-        
-        <div className="ml-2 sm:ml-4">
+
+        <div className="flex items-center gap-6 mt-4 sm:mt-0">
+          <SocialIcon icon={Github} link="https://github.com/Ankritjarngal" label="GitHub" initialColor="#8b949e" color="#f0f6fc" />
+          <SocialIcon icon={Linkedin} link="https://www.linkedin.com/in/ankrit-jarngal-349225316" label="LinkedIn" initialColor="#8b949e" color="#0a66c2" />
+          <SocialIcon icon={Instagram} link="https://www.instagram.com/ankrit.jarngal" label="Instagram" initialColor="#8b949e" color="#e4405f" />
+          <SocialIcon icon={Mail} link="mailto:ankrit4c@gmail.com" label="Email" initialColor="#8b949e" color="#00B8A9" />
+        </div>
+      </div>
+
+      <div
+        className={`fixed bottom-4 right-4 z-50 transition-all duration-500 ease-in-out 
+          ${isTopbarVisible ? "opacity-0 translate-y-4 pointer-events-none" : "opacity-100 translate-y-0"}`}
+      >
+        <div className="bg-gray-900 p-1 rounded-full shadow-lg hover:shadow-xl transition-all">
           <Resume />
         </div>
       </div>
-      <div className="flex justify-center sm:justify-end items-center gap-3 sm:gap-4 md:gap-6 p-1 w-full sm:w-auto">
-        <TopBarSection 
-          title={github2} 
-          alt="github" 
-          link="https://github.com/Ankritjarngal"
-          className="w-8 h-8 sm:w-10 sm:h-10 hover:scale-110 transition-transform duration-200"
-        />
-        <TopBarSection 
-          title={linkedin} 
-          alt="linkedin" 
-          link="https://www.linkedin.com/in/ankrit-jarngal-349225316"
-          className="w-8 h-8 sm:w-10 sm:h-10 hover:scale-110 transition-transform duration-200"
-        />
-        
-        <TopBarSection 
-          title={instagram} 
-          alt="instagram" 
-          link="https://www.instagram.com/ankrit.jarngal"
-          className="w-8 h-8 sm:w-10 sm:h-10 hover:scale-110 transition-transform duration-200"
-        />
-        <TopBarSection 
-          title={mail} 
-          alt="mail" 
-          link="mailto:ankrit4c@gmail.com"
-          className="w-8 h-8 sm:w-10 sm:h-10 hover:scale-110 transition-transform duration-200"
-        />
-         
-      </div>
-    </div>
+    </>
   );
 }

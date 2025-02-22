@@ -13,7 +13,6 @@ export default function App() {
   const [largeScreen, setLargeScreen] = useState(window.innerWidth > 786);
   const [sideBar, setSideBar] = useState(false);
   const [button, setButton] = useState(!largeScreen);
-  const [isTopbarVisible, setIsTopbarVisible] = useState(false);
 
   const handleResize = debounce(() => {
     setLargeScreen(window.innerWidth > 786);
@@ -24,12 +23,10 @@ export default function App() {
     const timer = setTimeout(() => {
       setPreLoader(false);
     }, 1500);
-
     return () => clearTimeout(timer);
   }, []);
 
   useEffect(() => {
-    setIsTopbarVisible(true);
     const timer = setTimeout(() => {
       if (window.innerWidth > 786) {
         setSideBar(true);
@@ -87,11 +84,7 @@ export default function App() {
 
       <div className={`flex-1 transition-all duration-300 ${sideBar ? "ml-12 sm:ml-[25%] md:ml-[16.67%] xl:ml-[12%]" : ""}`}>
         <Background>
-          <div
-            id="contact"
-            className={`transition-transform duration-500 select-none cursor-default
-              ${isTopbarVisible ? "translate-y-0" : "-translate-y-full"}`}
-          >
+          <div id="contact" className="transition-transform duration-500 select-none cursor-default">
             <Topbar>
               {button && (
                 <div

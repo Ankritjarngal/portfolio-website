@@ -58,11 +58,15 @@ export function Sidebar() {
 
       <div className="bg-[#151A23]/70 h-full flex flex-col justify-start items-center pt-4 sm:pt-8">
         <div className="w-16 sm:w-24 xl:w-28 rounded-full overflow-hidden m-2 border-2 border-[#ded7d7]/10 transform transition-all duration-300 hover:scale-105 hover:border-3 hover:border-[#00B8A9] hover:shadow-md">
-          <img
-            src={Profile}
-            alt="profile"
-            className="w-full h-full rounded-full object-cover opacity-60 transition-opacity duration-300 ease-in hover:opacity-100"
-          />
+        <div className="group w-full h-full">
+  <img
+    src={Profile}
+    alt="profile"
+    className="w-full h-full rounded-full object-cover opacity-60 transition-opacity duration-300 group-hover:opacity-100"
+  />
+</div>
+
+
         </div>
         
         <div 
