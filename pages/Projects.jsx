@@ -33,6 +33,15 @@ export function Projects() {
             projectLink="https://github.com/Ankritjarngal/http-server-from-scratch-in-c"
           />
         </div>
+        <div className="transform hover:scale-[1.02] transition-all">
+  <PerProject
+    title="News Sentiment Analysis"
+    text="Explored NLP techniques by analyzing news sentiment using AI models. The project extracts key nouns from news headlines and generates sentiment reports, enhancing understanding of NLP and sentiment analysis."
+    projectLink="https://github.com/Ankritjarngal/News-Sentiment-Analysis-Using-NLP"
+    skills={["JavaScript", "Node.js", "Compromise NLP", "Transformers", "Google Gemini AI"]}
+  />
+</div>
+
         
         
         
