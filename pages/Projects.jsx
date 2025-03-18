@@ -8,14 +8,7 @@ export function Projects() {
       <HeaderBox title="Projects" number={2} />
 
       <div className="grid gap-6 sm:gap-8">
-        <div className="transform hover:scale-[1.02] transition-all">
-          <PerProject
-            title="AI Agents"
-            text="Developed an AI-powered chatbot that provides real-time weather and location-based information using LangChain and Google Generative AI. The project integrates multiple APIs for fetching user location and weather conditions, enabling accurate and dynamic responses. It implements an interactive conversational experience with specialized weather assistance. Currently exploring advanced AI integrations and API optimizations."
-            projectLink="https://github.com/Ankritjarngal/AI-agents"
-            skills={["JavaScript", "Node.js", "Express", "LangChain", "Google Generative AI", "APIs", "OpenWeather", "IP Geolocation"]}
-          />
-        </div>
+        
         <div className="transform hover:scale-[1.02] transition-all">
           <PerProject
             title="QR Code Scanner"
@@ -27,13 +20,41 @@ export function Projects() {
         </div>
         <div className="transform hover:scale-[1.02] transition-all">
           <PerProject
+            title="AI Agents"
+            text="Developed an AI-powered chatbot that provides real-time weather and location-based information using LangChain and Google Generative AI. The project integrates multiple APIs for fetching user location and weather conditions, enabling accurate and dynamic responses. It implements an interactive conversational experience with specialized weather assistance. Currently exploring advanced AI integrations and API optimizations."
+            projectLink="https://github.com/Ankritjarngal/AI-agents"
+            skills={["JavaScript", "Node.js", "Express", "LangChain", "Google Generative AI", "APIs", "OpenWeather", "IP Geolocation"]}
+          />
+        </div>
+        <div className="transform hover:scale-[1.02] transition-all">
+  <PerProject
+    title="Resume Parser"
+    text="Developed an AI-powered resume parser that extracts key information from resumes using NLP techniques. The system processes PDF files, identifies named entities, and evaluates resumes based on predefined scoring criteria. It leverages advanced NLP models for accurate entity recognition and contextual understanding, helping automate candidate screening."
+    skills={[
+      "Natural",
+      "NER",
+      "NLP.js",
+      "Gemini AI",
+      "Express",
+      "Multer",
+      "PDF Parsing",
+      "Compromise NLP"
+    ]}
+    projectLink="https://github.com/Ankritjarngal/resume-evaluator"
+  />
+</div>
+        <div className="transform hover:scale-[1.02] transition-all">
+          <PerProject
             title="Http Server From Scratch In C"
             text="Developed an HTTP server from scratch in C using WinSock. Supports GET, POST, PUT, and DELETE methods with dynamic request handling. Features  request parsing, and structured logging. Implements  response generation for a reliable web server experience."
             skills={["C", "WinSock", "HTTP", "Socket Programming", "Networking", "Systems Programming"]}
             projectLink="https://github.com/Ankritjarngal/http-server-from-scratch-in-c"
           />
         </div>
-        <div className="transform hover:scale-[1.02] transition-all">
+       
+        
+        
+<div className="transform hover:scale-[1.02] transition-all">
           <PerProject
             title="Onsite Registration System"
             text="Created a comprehensive full-stack system for real-time participant registration. It features efficient data entry, management capabilities, and robust backend infrastructure handling concurrent registrations, with a user-friendly interface for streamlined registration."
@@ -41,6 +62,7 @@ export function Projects() {
             projectLink="https://github.com/Ankritjarngal/module"
           />
         </div>
+
         <div className="transform hover:scale-[1.02] transition-all">
           <PerProject
             title="News Sentiment Analysis"
@@ -68,6 +90,8 @@ export function Projects() {
             projectLink="https://github.com/Ankritjarngal/portfolio-website"
           />
         </div>
+        
+
       </div>
     </div>
   );
