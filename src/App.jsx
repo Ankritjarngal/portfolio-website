@@ -22,7 +22,7 @@ export default function App() {
     setPreLoader(true);
     const timer = setTimeout(() => {
       setPreLoader(false);
-    }, 2000);
+    }, 1500);
     return () => clearTimeout(timer);
   }, []);
 
@@ -62,7 +62,13 @@ export default function App() {
   };
 
   if (preLoader) {
-    return <CyberpunkPreloader />;
+    return (
+      <div className="h-screen w-screen flex items-center justify-center bg-[#1A202C]">
+        <div className="relative w-16 h-16">
+          <div className="absolute inset-0 w-full h-full bg-[#38A169] rounded-full animate-[ping_1.5s_infinite]"></div>
+        </div>
+      </div>
+    );
   }
 
   return (
@@ -120,119 +126,3 @@ export default function App() {
     </div>
   );
 }
-
-
-
-const CyberpunkPreloader = () => {
-  const [loading, setLoading] = useState(true);
-  const [progress, setProgress] = useState(0);
-  const [glitchActive, setGlitchActive] = useState(false);
-
-  useEffect(() => {
-    // Simulate loading progress
-    const interval = setInterval(() => {
-      setProgress(prev => (prev >= 100 ? 100 : prev + 5));
-    }, 100);
-
-    // Random glitch effect
-    const glitchInterval = setInterval(() => {
-      setGlitchActive(true);
-      setTimeout(() => setGlitchActive(false), 150);
-    }, 1000);
-
-    // Hide loader after 2000ms
-    const hideLoader = setTimeout(() => {
-      setLoading(false);
-    }, 2000);
-
-    return () => {
-      clearInterval(interval);
-      clearInterval(glitchInterval);
-      clearTimeout(hideLoader);
-    };
-  }, []);
-
-  if (!loading) return null; // Hide after 2000ms
-
-  return (
-    <div className="fixed inset-0 flex flex-col items-center justify-center bg-[#1A202C] z-50 overflow-hidden">
-      {/* Grid background */}
-      <div className="absolute inset-0 bg-[#1A202C] opacity-70">
-        <div className="absolute inset-0" style={{
-          backgroundImage: 'linear-gradient(to right, #38A16922 1px, transparent 1px), linear-gradient(to bottom, #38A16922 1px, transparent 1px)',
-          backgroundSize: '20px 20px'
-        }}></div>
-      </div>
-
-      {/* Glitchy "A" Logo */}
-      <div className={`relative mb-8 ${glitchActive ? 'animate-glitch' : ''}`}>
-        <div className="relative">
-          <div className="w-32 h-48 relative flex items-center justify-center">
-            {/* Left leg of A */}
-            <div className="absolute h-48 w-3 bg-[#38A169] transform -rotate-15 origin-bottom"></div>
-            <div className={`absolute h-48 w-3 bg-[#38A169] opacity-50 translate-x-1 ${glitchActive ? '-translate-y-2' : ''}`}></div>
-            <div className={`absolute h-48 w-3 bg-[#38A169] opacity-50 -translate-x-1 ${glitchActive ? 'translate-y-1' : ''}`}></div>
-            
-            {/* Right leg of A */}
-            <div className="absolute h-48 w-3 bg-[#38A169] transform rotate-15 origin-bottom"></div>
-            <div className={`absolute h-48 w-3 bg-[#38A169] opacity-50 -translate-x-1 ${glitchActive ? 'translate-y-1' : ''}`}></div>
-            <div className={`absolute h-48 w-3 bg-[#38A169] opacity-50 translate-x-1 ${glitchActive ? '-translate-y-2' : ''}`}></div>
-            
-            {/* Cross bar of A */}
-            <div className="absolute top-24 w-28 h-3 bg-[#38A169]"></div>
-            <div className={`absolute top-24 w-28 h-3 bg-[#38A169] opacity-50 translate-x-1 ${glitchActive ? '-translate-y-1' : ''}`}></div>
-            <div className={`absolute top-24 w-28 h-3 bg-[#38A169] opacity-50 -translate-x-1 ${glitchActive ? 'translate-y-1' : ''}`}></div>
-          </div>
-
-          {/* Cyberpunk "+" elements */}
-          <div className="absolute -top-4 -right-4 w-8 h-8 border-t-2 border-r-2 border-[#38A169]"></div>
-          <div className="absolute -bottom-4 -left-4 w-8 h-8 border-b-2 border-l-2 border-[#38A169]"></div>
-        </div>
-      </div>
-
-      {/* Loading bar */}
-      <div className="w-64 h-2 bg-[#1A202C] border border-[#38A169] relative mb-3 overflow-hidden">
-        <div 
-          className="h-full bg-[#38A169] transition-all duration-75 ease-out"
-          style={{ width: `${progress}%` }}
-        ></div>
-      </div>
-
-      {/* Progress percentage */}
-      <div className={`font-mono text-lg tracking-widest text-[#38A169]`}>
-        <span className="mr-1 opacity-70">::</span>
-        <span>{progress.toString().padStart(3, '0')}</span>
-        <span className="ml-1 opacity-70">%</span>
-      </div>
-
-      {/* SYSTEM LOADING */}
-      <div className="mt-2 font-mono text-xs text-[#38A169] tracking-widest">
-        SYSTEM LOADING<span className="animate-blink">_</span>
-      </div>
-
-      <style>{`
-        @keyframes glitch {
-          0% { transform: translate(0); }
-          20% { transform: translate(-2px, 2px); }
-          40% { transform: translate(-2px, -2px); }
-          60% { transform: translate(2px, 2px); }
-          80% { transform: translate(2px, -2px); }
-          100% { transform: translate(0); }
-        }
-
-        @keyframes blink {
-          0%, 100% { opacity: 1; }
-          50% { opacity: 0; }
-        }
-
-        .animate-glitch {
-          animation: glitch 1000ms linear;
-        }
-
-        .animate-blink {
-          animation: blink 800ms infinite;
-        }
-      `}</style>
-    </div>
-  );
-};
