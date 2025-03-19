@@ -22,7 +22,7 @@ export default function App() {
     setPreLoader(true);
     const timer = setTimeout(() => {
       setPreLoader(false);
-    }, 1500);
+    }, 4200);
     return () => clearTimeout(timer);
   }, []);
 
@@ -62,13 +62,7 @@ export default function App() {
   };
 
   if (preLoader) {
-    return (
-      <div className="h-screen w-screen flex items-center justify-center bg-[#1A202C]">
-        <div className="relative w-16 h-16">
-          <div className="absolute inset-0 w-full h-full bg-[#38A169] rounded-full animate-[ping_1.5s_infinite]"></div>
-        </div>
-      </div>
-    );
+    return <CyberpunkPreloader />;
   }
 
   return (
@@ -126,3 +120,168 @@ export default function App() {
     </div>
   );
 }
+
+const CyberpunkPreloader = () => {
+  const [loading, setLoading] = useState(true);
+  const [progress, setProgress] = useState(0);
+  const [glitchActive, setGlitchActive] = useState(false);
+
+  useEffect(() => {
+    // Simulate loading progress
+    const interval = setInterval(() => {
+      setProgress(prev => {
+        if (prev >= 100) {
+          clearInterval(interval);
+          return 100;
+        }
+        return prev + 2;
+      });
+    }, 80);
+
+    // Random glitch effect timing
+    const glitchInterval = setInterval(() => {
+      setGlitchActive(true);
+      setTimeout(() => setGlitchActive(false), 150);
+    }, 2000);
+
+    // Hide loader when progress reaches 100%
+    const hideLoader = setTimeout(() => {
+      setLoading(false);
+    }, 4200);
+
+    return () => {
+      clearInterval(interval);
+      clearInterval(glitchInterval);
+      clearTimeout(hideLoader);
+    };
+  }, []);
+
+  // When loading is complete, hide the component
+  if (!loading) return null;
+
+  return (
+    <div className="fixed inset-0 flex flex-col items-center justify-center bg-gray-900 z-50 overflow-hidden">
+      {/* Grid background */}
+      <div className="absolute inset-0 bg-gray-900 opacity-70">
+        <div className="absolute inset-0" style={{
+          backgroundImage: 'linear-gradient(to right, #38A16922 1px, transparent 1px), linear-gradient(to bottom, #38A16922 1px, transparent 1px)',
+          backgroundSize: '20px 20px'
+        }}></div>
+      </div>
+
+      {/* Animated scan line */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute w-full h-4 bg-green-500 opacity-10 animate-scan"></div>
+      </div>
+
+      <div className={`relative mb-16 ${glitchActive ? 'animate-glitch' : ''}`}>
+        {/* The "A" Logo with Cyberpunk style */}
+        <div className="relative">
+          {/* Main A shape */}
+          <div className="w-32 h-48 relative flex items-center justify-center">
+            {/* Left leg of A */}
+            <div className="absolute h-48 w-3 bg-green-500 transform -rotate-15 origin-bottom"></div>
+            <div className={`absolute h-48 w-3 bg-red-500 transform -rotate-15 origin-bottom opacity-50 translate-x-1 ${glitchActive ? '-translate-y-2' : ''}`}></div>
+            <div className={`absolute h-48 w-3 bg-blue-400 transform -rotate-15 origin-bottom opacity-50 -translate-x-1 ${glitchActive ? 'translate-y-1' : ''}`}></div>
+            
+            {/* Right leg of A */}
+            <div className="absolute h-48 w-3 bg-green-500 transform rotate-15 origin-bottom"></div>
+            <div className={`absolute h-48 w-3 bg-red-500 transform rotate-15 origin-bottom opacity-50 -translate-x-1 ${glitchActive ? 'translate-y-1' : ''}`}></div>
+            <div className={`absolute h-48 w-3 bg-blue-400 transform rotate-15 origin-bottom opacity-50 translate-x-1 ${glitchActive ? '-translate-y-2' : ''}`}></div>
+            
+            {/* Cross bar of A */}
+            <div className="absolute top-24 w-28 h-3 bg-green-500"></div>
+            <div className={`absolute top-24 w-28 h-3 bg-red-500 opacity-50 translate-x-1 ${glitchActive ? '-translate-y-1' : ''}`}></div>
+            <div className={`absolute top-24 w-28 h-3 bg-blue-400 opacity-50 -translate-x-1 ${glitchActive ? 'translate-y-1' : ''}`}></div>
+          </div>
+          
+          {/* Additional cyberpunk elements */}
+          <div className="absolute -top-4 -right-4 w-8 h-8 border-t-2 border-r-2 border-green-500"></div>
+          <div className="absolute -bottom-4 -left-4 w-8 h-8 border-b-2 border-l-2 border-green-500"></div>
+        </div>
+      </div>
+
+      {/* Digital looking loading bar */}
+      <div className="w-64 h-2 bg-gray-800 relative mb-3 overflow-hidden">
+        <div 
+          className="h-full bg-green-500 transition-all duration-75 ease-out"
+          style={{ width: `${progress}%` }}
+        ></div>
+        {/* Loading bar scan effect */}
+        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-green-300 to-transparent opacity-30 w-20 h-full transform -translate-x-20 animate-scan-fast"></div>
+      </div>
+      
+      {/* Binary-looking data transfer effect */}
+      <div className="flex justify-center mb-6">
+        <div className="font-mono text-xs text-green-500 w-64 truncate overflow-hidden animate-typewriter">
+          {Array.from({ length: 32 }, () => Math.floor(Math.random() * 2)).join('')}
+        </div>
+      </div>
+      
+      {/* Progress percentage with cyberpunk style */}
+      <div className={`font-mono text-lg tracking-widest ${glitchActive ? 'text-red-400' : 'text-green-500'}`}>
+        <span className="mr-1 opacity-70">::</span>
+        <span>{progress.toString().padStart(3, '0')}</span>
+        <span className="ml-1 opacity-70">%</span>
+      </div>
+      
+      {/* "SYSTEM LOADING" text */}
+      <div className="mt-2 font-mono text-xs text-green-400 tracking-widest">
+        SYSTEM LOADING<span className="animate-blink">_</span>
+      </div>
+    </div>
+  );
+};
+
+// Add these animations to your global CSS or as inline styles
+const styles = `
+@keyframes scan {
+  from { transform: translateY(-100vh); }
+  to { transform: translateY(100vh); }
+}
+
+@keyframes scanFast {
+  from { transform: translateX(-100%); }
+  to { transform: translateX(400%); }
+}
+
+@keyframes glitch {
+  0% { transform: translate(0); }
+  20% { transform: translate(-2px, 2px); }
+  40% { transform: translate(-2px, -2px); }
+  60% { transform: translate(2px, 2px); }
+  80% { transform: translate(2px, -2px); }
+  100% { transform: translate(0); }
+}
+
+@keyframes typewriter {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.animate-scan {
+  animation: scan 8s linear infinite;
+}
+
+.animate-scan-fast {
+  animation: scanFast 1.5s linear infinite;
+}
+
+.animate-glitch {
+  animation: glitch 0.2s linear;
+}
+
+.animate-typewriter {
+  animation: typewriter 3s steps(60, end) infinite;
+}
+
+.animate-blink {
+  animation: blink 0.8s infinite;
+}
+`;
+
