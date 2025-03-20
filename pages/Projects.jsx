@@ -19,26 +19,29 @@ export function Projects() {
           />
         </div>
         <div className="transform hover:scale-[1.02] transition-all">
-  <PerProject
-    title="Resume Evaluator"
-    text="Built an AI-powered Resume Evaluator that extracts key information from resumes using NLP and NER techniques. The system processes PDF files, identifies named entities, and evaluates resumes based on predefined scoring criteria. It integrates vector-based search using Pinecone, enabling efficient resume retrieval and similarity matching."
-    skills={[
-      "Natural Language Processing",
-      "NER",
-      "Vector Embeddings",
-      "Hugging Face",
-      "Pinecone",
-      "Vector Search",
-      "Gemini AI",
-      "Express",
-      "Multer",
-      "PDF Parsing",
-      "Compromise NLP",
-
-    ]}
-    projectLink="https://github.com/Ankritjarngal/resume-evaluator"
-  />
+        <PerProject
+  title="Resume Evaluator"
+  text="Developed an AI-powered Resume Evaluator that extracts key details from resumes using NLP and Named Entity Recognition (NER). The system processes PDF resumes, identifies named entities, and scores them based on predefined criteria. It integrates vector-based search using Pinecone for similarity matching and now includes a search feature to find similar resumes based on extracted skills, education, and experience. Resumes are securely stored and managed using Cloudinary."
+  skills={[
+    "Natural Language Processing",
+    "Named Entity Recognition (NER)",
+    "Vector Embeddings",
+    "Hugging Face",
+    "Pinecone",
+    "Vector Search",
+    "Gemini AI",
+    "Express.js",
+    "Multer",
+    "PDF Parsing",
+    "Compromise NLP",
+    "Tailwind CSS",
+    "Cloudinary",
+    "Gemini Ai"
+  ]}
+  projectLink="https://github.com/Ankritjarngal/resume-evaluator"
+/>
 </div>
+
         <div className="transform hover:scale-[1.02] transition-all">
           <PerProject
             title="AI Agents"
