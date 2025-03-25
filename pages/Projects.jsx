@@ -36,9 +36,12 @@ export function Projects() {
     "Compromise NLP",
     "Tailwind CSS",
     "Cloudinary",
-    "Gemini Ai"
+    "Gemini Ai",
+    "ReactJS",
+
   ]}
   projectLink="https://github.com/Ankritjarngal/resume-evaluator"
+  liveLink="https://resume-everything.vercel.app/"
 />
 </div>
 
@@ -67,14 +70,6 @@ export function Projects() {
           />
         </div>
         
-
-        
-       
-        
-        
-
-
-
         <div className="transform hover:scale-[1.02] transition-all">
           <PerProject
             title="News Sentiment Analysis"
