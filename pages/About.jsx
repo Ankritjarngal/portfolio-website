@@ -11,16 +11,21 @@ export function About() {
             data={`Hi, I'm Ankrit Jarngal, an aspiring web developer from Hirangar, Jammu and Kashmir. I am currently in my 2nd year of the Computer Science program at the National Institute of Technology, Srinagar.
 
 Skills:
-- Frontend: HTML, CSS, JavaScript, ReactJS, TypeScript
-- Backend: Node.js, Express
-- Databases: MongoDB, PostgreSQL
+- Frontend: HTML, CSS, JavaScript, ReactJS, TypeScript, Tailwind CSS, NuxtJS
+- Backend: Node.js, Express, Socket Programming, HTTP Server Implementation , NextJS
+- Databases: MongoDB, PostgreSQL, Pinecone (Vector Database)
 - Version Control: Git, GitHub
-- Authentication: JWT Authentication
+- Authentication: JWT Authentication ,Next Auth
+- AI & ML: Natural Language Processing (NLP), Named Entity Recognition (NER), Vector Embeddings, Google Generative AI, Gemini AI, LangChain, Transformers, Sentiment Analysis, Compromise NLP
+- Cloud: Vercel, Cloudinary 
+- Systems Programming: C, WinSock, Networking
 
 Others:
 - JSON, JSONBin
 - API Integration
 - RESTful APIs
+- Web Scraping (Puppeteer, Cheerio)
+- PDF Parsing, Multer
 
 Middleware:
 - Generic Middlewares: Authentication, Authorization, Request Validation
