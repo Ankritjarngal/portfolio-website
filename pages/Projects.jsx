@@ -19,30 +19,33 @@ export function Projects() {
           />
         </div>
         <div className="transform hover:scale-[1.02] transition-all">
-        <PerProject
-  title="Resume Evaluator"
-  text="Developed an AI-powered Resume Evaluator that extracts key details from resumes using NLP and Named Entity Recognition (NER). The system processes PDF resumes, identifies named entities, and scores them based on predefined criteria. It integrates vector-based search using Pinecone for similarity matching and now includes a search feature to find similar resumes based on extracted skills, education, and experience. Resumes are securely stored and managed using Cloudinary."
-  skills={[
-    "Natural Language Processing",
-    "Named Entity Recognition (NER)",
-    "Vector Embeddings",
-    "Hugging Face",
-    "Pinecone",
-    "Vector Search",
-    "Gemini AI",
-    "Express.js",
-    "Multer",
-    "PDF Parsing",
-    "Compromise NLP",
-    "Tailwind CSS",
-    "Cloudinary",
-    "Gemini Ai",
-    "ReactJS",
-
-  ]}
-  projectLink="https://github.com/Ankritjarngal/resume-evaluator"
-  liveLink="https://resume-everything.vercel.app/"
-/>
+  <PerProject
+    title="Resume Evaluator"
+    text="Developed an AI-powered Resume Evaluator that extracts key details from resumes using NLP and Named Entity Recognition (NER). The system processes PDF resumes, identifies named entities, and scores them based on predefined criteria. It integrates vector-based search using Pinecone for similarity matching and now includes a search feature to find similar resumes based on extracted skills, education, and experience. Resumes are securely stored and managed using Cloudinary.
+    
+    Additionally, the system now includes automated web scraping to fetch relevant internships from Internshala based on extracted skills. Users can seamlessly browse internships that match their expertise and apply directly with a single click, redirecting them to the specific internship page on Internshala."
+    skills={[
+      "Natural Language Processing",
+      "Named Entity Recognition (NER)",
+      "Vector Embeddings",
+      "Hugging Face",
+      "Pinecone",
+      "Vector Search",
+      "Gemini AI",
+      "Express.js",
+      "Web Scraping",
+      "Multer",
+      "PDF Parsing",
+      "Compromise NLP",
+      "Tailwind CSS",
+      "Cloudinary",
+      "ReactJS",
+      "Puppeteer",
+      "Cheerio"
+    ]}
+    projectLink="https://github.com/Ankritjarngal/resume-evaluator"
+    liveLink="https://resume-everything.vercel.app/"
+  />
 </div>
 
         <div className="transform hover:scale-[1.02] transition-all">
