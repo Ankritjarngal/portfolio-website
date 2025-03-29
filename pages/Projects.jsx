@@ -21,27 +21,22 @@ export function Projects() {
         <div className="transform hover:scale-[1.02] transition-all">
   <PerProject
     title="Resume Evaluator"
-    text="Developed an AI-powered Resume Evaluator that extracts key details from resumes using NLP and Named Entity Recognition (NER). The system processes PDF resumes, identifies named entities, and scores them based on predefined criteria. It integrates vector-based search using Pinecone for similarity matching and now includes a search feature to find similar resumes based on extracted skills, education, and experience. Resumes are securely stored and managed using Cloudinary.
-    
-    Additionally, the system now includes automated web scraping to fetch relevant internships from Internshala based on extracted skills. Users can seamlessly browse internships that match their expertise and apply directly with a single click, redirecting them to the specific internship page on Internshala."
+    text="AI-powered Resume Evaluator that extracts key details using NLP and NER. Processes PDFs, scores resumes on predefined criteria, and integrates vector-based search with Pinecone for similarity matching. Includes a search feature for finding similar resumes based on skills, education, and experience. Secure storage via Cloudinary. Features automated web scraping to fetch relevant Internshala internships based on extracted skills, allowing users to browse and apply directly."
     skills={[
-      "Natural Language Processing",
-      "Named Entity Recognition (NER)",
+      "NLP",
+      "NER",
       "Vector Embeddings",
       "Hugging Face",
       "Pinecone",
-      "Vector Search",
       "Gemini AI",
       "Express.js",
       "Web Scraping",
       "Multer",
       "PDF Parsing",
-      "Compromise NLP",
       "Tailwind CSS",
       "Cloudinary",
       "ReactJS",
-      "Puppeteer",
-      "Cheerio"
+      "Puppeteer"
     ]}
     projectLink="https://github.com/Ankritjarngal/resume-evaluator"
     liveLink="https://resume-everything.vercel.app/"
