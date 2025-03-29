@@ -10,30 +10,32 @@ export function About() {
           <Written
             data={`Hi, I'm Ankrit Jarngal, an aspiring web developer from Hirangar, Jammu and Kashmir. I am currently in my 2nd year of the Computer Science program at the National Institute of Technology, Srinagar.
 
-Skills:
-- Frontend: HTML, CSS, JavaScript, ReactJS, TypeScript, Tailwind CSS, NuxtJS
-- Backend: Node.js, Express, Socket Programming, HTTP Server Implementation , NextJS
+**Technical Skills**
+
+**Development**
+- Frontend: HTML, CSS, JavaScript, ReactJS, TypeScript, Tailwind CSS, NextJS
+- Backend: Node.js, Express, NextJS, HTTP Server Implementation, Socket Programming
 - Databases: MongoDB, PostgreSQL, Pinecone (Vector Database)
+
+**Tools & Infrastructure**
 - Version Control: Git, GitHub
-- Authentication: JWT Authentication ,Next Auth
-- AI & ML: Natural Language Processing (NLP), Named Entity Recognition (NER), Vector Embeddings, Google Generative AI, Gemini AI, LangChain, Transformers, Sentiment Analysis, Compromise NLP
-- Cloud: Vercel, Cloudinary 
+- Cloud Services: Vercel, Cloudinary
+- Authentication: JWT, Next Auth
+
+**AI & Machine Learning**
+- NLP Technologies: LangChain, Transformers, Compromise NLP
+- Techniques: Named Entity Recognition, Vector Embeddings, Sentiment Analysis
+- Platforms: Google Generative AI, Gemini AI
+
+**Additional Expertise**
+- API Development: RESTful APIs, API Integration
+- Data Processing: Web Scraping (Puppeteer, Cheerio), PDF Parsing
 - Systems Programming: C, WinSock, Networking
-
-Others:
-- JSON, JSONBin
-- API Integration
-- RESTful APIs
-- Web Scraping (Puppeteer, Cheerio)
-- PDF Parsing, Multer
-
-Middleware:
-- Generic Middlewares: Authentication, Authorization, Request Validation
-- Libraries: Zod, JWT, CORS, Express-Session
+- Middleware: Authentication, Authorization, Request Validation
+- Libraries: Zod, JWT, CORS, Express-Session, Multer
 - Error Handling: Custom Error Responses, Async Error Handling
 
-I am passionate about building responsive websites and web applications, always eager to learn and grow in the field of web development.
-`}
+I am passionate about building responsive websites and web applications, always eager to learn and grow in the field of web development.`}
           />
         </div>
       </div>
