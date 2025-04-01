@@ -20,7 +20,7 @@ export function Projects() {
         </div>
         <div className="transform hover:scale-[1.02] transition-all">
   <PerProject
-    title="Resume Evaluator"
+    title="Smart Resume Analyzer: Score, Compare & Matching Internships"
     text="AI-powered Resume Evaluator that extracts key details using NLP and NER. Processes PDFs, scores resumes on predefined criteria, and integrates vector-based search with Pinecone for similarity matching. Includes a search feature for finding similar resumes based on skills, education, and experience. Secure storage via Cloudinary. Features automated web scraping to fetch relevant Internshala internships based on extracted skills, allowing users to browse and apply directly."
     skills={[
       "NLP",
