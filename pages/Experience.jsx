@@ -10,6 +10,22 @@ export const Experience = () => {
         
         <div className="space-y-4 sm:space-y-6">
           <ShadowBox 
+            title="Generative AI Intern (March 2025 – April 2025)" 
+            data="AgentsMadeEasy LLC"
+          >
+            <div className="mt-4 transform hover:scale-[1.01] transition-all">
+              <ul className="list-disc pl-6 space-y-2 sm:space-y-3 text-[#A0AEC0]">
+                <li className="leading-relaxed">Conducted comprehensive testing of the company's no-code AI platform, identifying and documenting bugs and performance issues</li>
+                <li className="leading-relaxed">Collaborated with development team to improve user experience and platform stability</li>
+                <li className="leading-relaxed">Contributed to quality assurance processes for AI-powered tools</li>
+              </ul>
+              <div className="mt-4 pt-4 border-t border-[#4A5568]">
+                <ExperienceSkills skills={['AI Testing', 'Bug Reporting', 'UX Enhancement', 'Quality Assurance', 'Team Collaboration']} />
+              </div>
+            </div>
+          </ShadowBox>
+
+          <ShadowBox 
             title="Web Development Team Member (Aug 2023 – Oct 2023)" 
             data="Techvaganza, NIT Srinagar"
           >
