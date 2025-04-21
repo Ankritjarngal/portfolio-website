@@ -9,15 +9,7 @@ export function Projects() {
 
       <div className="grid gap-6 sm:gap-8">
         
-        <div className="transform hover:scale-[1.02] transition-all">
-          <PerProject
-            title="QR Code Scanner"
-            text="Developed a full-stack system for scanning and managing participant data during Techvaganza 2024. This project implemented real-time participant tracking and data management functionality, showcasing proficiency in full-stack development and event management systems."
-            projectLink="https://github.com/Ankritjarngal/qr_code_scanner"
-            liveLink="https://qr-code-scanner-sand.vercel.app"
-            skills={["HTML", "CSS", "JavaScript", "Node.js", "Express", "PostgreSQL", "Vercel"]}
-          />
-        </div>
+        
         <div className="transform hover:scale-[1.02] transition-all">
   <PerProject
     title="Smart Resume Analyzer: Score, Compare & Matching Internships"
@@ -42,8 +34,7 @@ export function Projects() {
     liveLink="https://resume-everything.vercel.app/"
   />
 </div>
-
-        <div className="transform hover:scale-[1.02] transition-all">
+<div className="transform hover:scale-[1.02] transition-all">
           <PerProject
             title="AI Agents"
             text="Developed an AI-powered chatbot that provides real-time weather and location-based information using LangChain and Google Generative AI. The project integrates multiple APIs for fetching user location and weather conditions, enabling accurate and dynamic responses. It implements an interactive conversational experience with specialized weather assistance. Currently exploring advanced AI integrations and API optimizations."
@@ -51,6 +42,17 @@ export function Projects() {
             skills={["JavaScript", "Node.js", "Express", "LangChain", "Google Generative AI", "APIs", "OpenWeather", "IP Geolocation"]}
           />
         </div>
+<div className="transform hover:scale-[1.02] transition-all">
+          <PerProject
+            title="QR Code Scanner"
+            text="Developed a full-stack system for scanning and managing participant data during Techvaganza 2024. This project implemented real-time participant tracking and data management functionality, showcasing proficiency in full-stack development and event management systems."
+            projectLink="https://github.com/Ankritjarngal/qr_code_scanner"
+            liveLink="https://qr-code-scanner-sand.vercel.app"
+            skills={["HTML", "CSS", "JavaScript", "Node.js", "Express", "PostgreSQL", "Vercel"]}
+          />
+        </div>
+
+        
         <div className="transform hover:scale-[1.02] transition-all">
           <PerProject
             title="Onsite Registration System"
