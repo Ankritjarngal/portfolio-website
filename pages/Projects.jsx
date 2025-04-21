@@ -26,9 +26,10 @@ export function Projects() {
       "Multer",
       "PDF Parsing",
       "Tailwind CSS",
-      "Cloudinary",
+      "Google Drive API",
       "ReactJS",
-      "Puppeteer"
+      "Puppeteer",
+      
     ]}
     projectLink="https://github.com/Ankritjarngal/resume-evaluator"
     liveLink="https://resume-everything.vercel.app/"
