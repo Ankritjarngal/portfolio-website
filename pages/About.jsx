@@ -10,24 +10,24 @@ export function About() {
           <Written
             data={`Hi, I'm Ankrit Jarngal, an aspiring web developer from Hirangar, Jammu and Kashmir. I am currently in my 2nd year of the Computer Science program at the National Institute of Technology, Srinagar.
 
-**Technical Skills**
+Technical Skills
 
-**Development**
+Development
 - Frontend: HTML, CSS, JavaScript, ReactJS, TypeScript, Tailwind CSS, NextJS
-- Backend: Node.js, Express, NextJS, HTTP Server Implementation, Socket Programming
-- Databases: MongoDB, PostgreSQL, Pinecone (Vector Database)
+- Backend: Node.js, Express, NextJS, HTTP Server Implementation, Socket Programming, Flask
+- Databases: MongoDB, PostgreSQL, Pinecone (Vector Database), Supabase
 
-**Tools & Infrastructure**
+Tools & Infrastructure
 - Version Control: Git, GitHub
-- Cloud Services: Vercel, Cloudinary
+- Cloud Services: Vercel, Cloudinary, Google Drive API, Google Calendar API
 - Authentication: JWT, Next Auth
 
-**AI & Machine Learning**
+AI & Machine Learning
 - NLP Technologies: LangChain, Transformers, Compromise NLP
-- Techniques: Named Entity Recognition, Vector Embeddings, Sentiment Analysis
-- Platforms: Google Generative AI, Gemini AI
+- Techniques: Named Entity Recognition, Vector Embeddings, Sentiment Analysis, Intent Analysis
+- Platforms: Google Generative AI, Gemini AI, Hugging Face
 
-**Additional Expertise**
+Additional Expertise
 - API Development: RESTful APIs, API Integration
 - Data Processing: Web Scraping (Puppeteer, Cheerio), PDF Parsing
 - Systems Programming: C, WinSock, Networking
@@ -35,7 +35,9 @@ export function About() {
 - Libraries: Zod, JWT, CORS, Express-Session, Multer
 - Error Handling: Custom Error Responses, Async Error Handling
 
-I am passionate about building responsive websites and web applications, always eager to learn and grow in the field of web development.`}
+I am passionate about building responsive websites and web applications, always eager to learn and grow in the field of web development.
+
+`}
           />
         </div>
       </div>
