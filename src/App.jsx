@@ -73,6 +73,7 @@ export default function App() {
 
   return (
     <div className="relative flex min-h-screen bg-[#1A202C]">
+      {/* Sidebar */}
       <div
         className={`fixed left-0 top-0 h-full bg-[#1A202C] transform transition-transform duration-300 ease-in-out
           w-22 select-none cursor-default sm:w-3/12 md:w-2/12 xl:w-[12%] z-20
@@ -82,8 +83,10 @@ export default function App() {
         <Sidebar />
       </div>
 
+      {/* Main Content */}
       <div className={`flex-1 transition-all duration-300 ${sideBar ? "ml-12 sm:ml-[25%] md:ml-[16.67%] xl:ml-[12%]" : ""}`}>
         <Background>
+          {/* Topbar and Toggle Button */}
           <div id="contact" className="transition-transform duration-500 select-none cursor-default">
             <Topbar>
               {button && (
@@ -100,23 +103,26 @@ export default function App() {
             </Topbar>
           </div>
 
+          {/* Page Sections */}
           <div className="w-full overflow-x-hidden">
             <div className="flex flex-wrap justify-between">
+              {/* About - Right aligned */}
               <div id="about" className="w-full md:max-w-3xl mt-6 flex justify-end ml-auto mr-6">
                 <About />
               </div>
 
-              
-
-              <div id="projects" className="w-full md:max-w-3xl mt-6 flex justify-end ml-auto mr-6">
+              {/* Projects - Left aligned */}
+              <div id="projects" className="w-full md:max-w-3xl mt-6 flex justify-start ml-6">
                 <Projects />
               </div>
 
-              <div id="experience" className="w-full md:max-w-3xl mt-6 flex justify-start ml-7">
+              {/* Experience - Right aligned */}
+              <div id="experience" className="w-full md:max-w-3xl mt-6 flex justify-end ml-auto mr-6">
                 <Experience />
               </div>
             </div>
 
+            {/* Footer */}
             <div id="footer" className="mt-6 w-full">
               <Footer />
             </div>
