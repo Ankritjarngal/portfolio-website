@@ -12,7 +12,7 @@ export function Projects() {
 
 
                 
-      <div className="transform hover:scale-[1.02] transition-all">
+      {/* <div className="transform hover:scale-[1.02] transition-all">
           
       <PerProject
   title="MCP Assistant (Model Context Protocol)"
@@ -23,7 +23,7 @@ export function Projects() {
   ]}
 />
 
-        </div>
+        </div> */}
         
         
         <div className="transform hover:scale-[1.02] transition-all">
