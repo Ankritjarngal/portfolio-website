@@ -8,9 +8,26 @@ export function Projects() {
       <HeaderBox title="Projects" number={2} />
 
       <div className="grid gap-6 sm:gap-8">
+
+
+
+                
+      <div className="transform hover:scale-[1.02] transition-all">
+          
+      <PerProject
+  title="MCP Assistant (Model Context Protocol)"
+  text=""
+  projectLink="https://github.com/Ankritjarngal/AI-agents"
+  skills={[
+    
+  ]}
+/>
+
+        </div>
         
         
         <div className="transform hover:scale-[1.02] transition-all">
+
   <PerProject
     title="Smart Resume Analyzer: Score, Compare & Matching Internships"
     text="AI-powered Resume Evaluator that extracts key details using NLP and NER. Processes PDFs, scores resumes on predefined criteria, and integrates vector-based search with Pinecone for similarity matching. Includes a search feature for finding similar resumes based on skills, education, and experience. Secure storage via Google Drive API. Features automated web scraping to fetch relevant Internshala internships based on extracted skills, allowing users to browse and apply directly."
@@ -57,7 +74,7 @@ export function Projects() {
         <div className="transform hover:scale-[1.02] transition-all">
           <PerProject
             title="Onsite Registration System"
-            text="Created a comprehensive full-stack system for real-time participant registration. It features efficient data entry, management capabilities, and robust backend infrastructure handling concurrent registrations, with a user-friendly interface for streamlined registration."
+            text="Developed a full-stack system for registering participants for Techvaganza 2024.. It features efficient data entry, management capabilities, and robust backend infrastructure handling  registrations, with a user-friendly interface for streamlined registration."
             skills={["HTML", "CSS", "JavaScript", "Node.js", "PostgreSQL", "Express"]}
             projectLink="https://github.com/Ankritjarngal/module"
           />
