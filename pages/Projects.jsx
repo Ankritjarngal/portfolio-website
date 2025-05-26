@@ -12,18 +12,31 @@ export function Projects() {
 
 
                 
-      {/* <div className="transform hover:scale-[1.02] transition-all">
+      <div className="transform hover:scale-[1.02] transition-all">
           
       <PerProject
-  title="MCP Assistant (Model Context Protocol)"
-  text=""
-  projectLink="https://github.com/Ankritjarngal/AI-agents"
+  title="MCP (Model Context Protocol) Assistant"
+  text="
+  **Currenty Working On**
+
+  MCP Assistant is an intelligent, modular AI assistant framework designed around a structured Model Context Protocol (MCP). The system processes user queries by first identifying the underlying intent (e.g., Google Calendar, mailing service, task management more to be added soon) and then enriching the query using contextual data from previous interactions.
+
+It utilizes the OpenRouter API with the Meta llama model (Metts LLaMA 3.3) for natural language understanding and dynamic context reasoning. Once the query is contextually enhanced, it is routed to the appropriate agent, which performs the relevant task (e.g., creating calendar events,editing alrady existing events ,rescheduling evens , composing emails). The final response is handled by an action execution layer and returned to the user seamlessly.
+
+This project emphasizes robustness through a stateless design, intelligent fallback handling, and modular architecture. It integrates with real-world services like Google Calendar, Gmail, to create a production-grade assistant capable of understanding vague or multi-step queries with high accuracy
+Will add more services soon."
+  
+projectLink="https://github.com/Ankritjarngal/AI-agents"
+  liveLink={"https://mcp-assistant.vercel.app"}
   skills={[
-    
+    "JavaScript", "Node.js", "Express", "OpenRouter API", "Metta llama (Metta LLaMA 3.3)",
+    "Intent Recognition", "Context-Aware Query Enhancement", 
+    "Google Calendar API", "Gmail API", "Modular Agent Architecture"
   ]}
 />
 
-        </div> */}
+
+        </div>
         
         
         <div className="transform hover:scale-[1.02] transition-all">
