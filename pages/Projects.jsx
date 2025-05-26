@@ -26,7 +26,7 @@ It utilizes the OpenRouter API with the Meta llama model (Metts LLaMA 3.3) for n
 This project emphasizes robustness through a stateless design, intelligent fallback handling, and modular architecture. It integrates with real-world services like Google Calendar, Gmail, to create a production-grade assistant capable of understanding vague or multi-step queries with high accuracy
 Will add more services soon."
   
-projectLink="https://github.com/Ankritjarngal/AI-agents"
+projectLink="https://github.com/Ankritjarngal/MCP-assistant"
   liveLink={"https://mcp-assistant.vercel.app"}
   skills={[
     "JavaScript", "Node.js", "Express", "OpenRouter API", "Metta llama (Metta LLaMA 3.3)",
