@@ -29,7 +29,6 @@ Will add more services soon."
 projectLink="https://github.com/Ankritjarngal/MCP-assistant"
 liveLink="https://mcp-assistant.vercel.app/"
 
-
   skills={[
     "JavaScript", "Node.js", "Express", "OpenRouter API", "Metta llama (Metta LLaMA 3.3)",
     "Intent Recognition", "Context-Aware Query Enhancement", 

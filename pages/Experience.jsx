@@ -6,9 +6,26 @@ export const Experience = () => {
   return (
     <div className="w-full max-w-3xl mt-6">
       <div className="px-4 sm:px-0 space-y-6 sm:space-y-8">
-        <HeaderBox title="Experience" number={3} />
+        <HeaderBox title="Experience" number={4} />
         
         <div className="space-y-4 sm:space-y-6">
+          <ShadowBox 
+            title="Fullstack Development Intern (May 2025 – Present)" 
+            data="AsynzX Computing"
+          >
+            <div className="mt-4 transform hover:scale-[1.01] transition-all">
+              <ul className="list-disc pl-6 space-y-2 sm:space-y-3 text-[#A0AEC0]">
+                <li className="leading-relaxed">Developing responsive and scalable websites using ReactJS and Node.js</li>
+                <li className="leading-relaxed">Integrating frontend components with backend APIs for seamless functionality</li>
+                <li className="leading-relaxed">Collaborating with remote teams and using version control tools for code management</li>
+                <li className="leading-relaxed">Designing and implementing UI components based on Figma prototypes</li>
+              </ul>
+              <div className="mt-4 pt-4 border-t border-[#4A5568]">
+                <ExperienceSkills skills={['ReactJS', 'Node.js', 'REST APIs', 'Figma', 'Fullstack Development', 'Remote Collaboration', 'Responsive Design']} />
+              </div>
+            </div>
+          </ShadowBox>
+
           <ShadowBox 
             title="Generative AI Intern (March 2025 – April 2025)" 
             data="AgentsMadeEasy LLC"
