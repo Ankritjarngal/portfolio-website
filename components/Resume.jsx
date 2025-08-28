@@ -32,6 +32,6 @@ function downloadResume() {
   const link = AnkritResume;
   const a = document.createElement("a");
   a.href = link;
-  a.download = "Ankrit_Jarngal_Resume.pdf";
+  a.download = "f";
   a.click();
 }
