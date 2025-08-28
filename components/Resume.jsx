@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { FileText, Download } from "lucide-react";
-import AnkritResume from ".";
+import AnkritResume from "";
 
 export function Resume() {
   const [isHovered, setIsHovered] = useState(false);
