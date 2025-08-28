@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { FileText, Download } from "lucide-react";
-import AnkritResume from "";
+import AnkritResume from "/AnkritResume.pdf";
 
 export function Resume() {
   const [isHovered, setIsHovered] = useState(false);
@@ -32,6 +32,6 @@ function downloadResume() {
   const link = AnkritResume;
   const a = document.createElement("a");
   a.href = link;
-  a.download = "f";
+  a.download = "Ankrit_Jarngal_Resume.pdf";
   a.click();
 }
