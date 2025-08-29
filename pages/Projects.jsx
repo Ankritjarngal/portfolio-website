@@ -42,6 +42,7 @@ liveLink="https://mcp-assistant.vercel.app/"
         
         <div className="transform hover:scale-[1.02] transition-all">
 
+
   <PerProject
     title="Smart Resume Analyzer: Score, Compare & Matching Internships"
     text="AI-powered Resume Evaluator that extracts key details using NLP and NER. Processes PDFs, scores resumes on predefined criteria, and integrates vector-based search with Pinecone for similarity matching. Includes a search feature for finding similar resumes based on skills, education, and experience. Secure storage via Google Drive API. Features automated web scraping to fetch relevant Internshala internships based on extracted skills, allowing users to browse and apply directly."
@@ -66,10 +67,20 @@ liveLink="https://mcp-assistant.vercel.app/"
     liveLink="https://resume-everything.vercel.app/"
   />
 </div>
+
 <div className="transform hover:scale-[1.02] transition-all">
           <PerProject
             title="AI Agents"
             text="Developed an AI-powered chatbot that provides real-time weather and location-based information using LangChain and Google Generative AI. The project integrates multiple APIs for fetching user location and weather conditions, enabling accurate and dynamic responses. It implements an interactive conversational experience with specialized weather assistance. Currently exploring advanced AI integrations and API optimizations."
+            projectLink="https://github.com/Ankritjarngal/AI-agents"
+            skills={["JavaScript", "Node.js", "Express", "LangChain", "Google Generative AI", "APIs", "OpenWeather", "IP Geolocation"]}
+          />
+        </div>
+
+        <div className="transform hover:scale-[1.02] transition-all">
+          <PerProject
+            title="HeadSpace"
+            text="Made a personal chatbot assistant with built in journal support with the context awarenress of the journels it uses "
             projectLink="https://github.com/Ankritjarngal/AI-agents"
             skills={["JavaScript", "Node.js", "Express", "LangChain", "Google Generative AI", "APIs", "OpenWeather", "IP Geolocation"]}
           />
