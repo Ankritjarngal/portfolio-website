@@ -77,14 +77,14 @@ liveLink="https://mcp-assistant.vercel.app/"
           />
         </div>
 
-        <div className="transform hover:scale-[1.02] transition-all">
+        {/* <div className="transform hover:scale-[1.02] transition-all">
           <PerProject
             title="HeadSpace"
             text="Made a personal chatbot assistant with built in journal support with the context awarenress of the journels it uses "
             projectLink="https://github.com/Ankritjarngal/AI-agents"
             skills={["JavaScript", "Node.js", "Express", "LangChain", "Google Generative AI", "APIs", "OpenWeather", "IP Geolocation"]}
           />
-        </div>
+        </div> */}
 <div className="transform hover:scale-[1.02] transition-all">
           <PerProject
             title="QR Code Scanner"
