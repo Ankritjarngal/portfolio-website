@@ -8,7 +8,7 @@ export function About() {
         <HeaderBox title="About Me!" number={1} />
         <div className="transform hover:scale-[1.02] transition-all">
           <Written
-            data={`Hi, I'm Ankrit Jarngal, an aspiring web developer from Hirangar, Jammu and Kashmir. I am currently in my 2nd year of the Computer Science program at the National Institute of Technology, Srinagar.
+            data={`Hi, I'm Ankrit Jarngal, an aspiring web developer from Hirangar, Jammu and Kashmir. I am currently in my 3rd year of the Computer Science program at the National Institute of Technology, Srinagar.
 
 Technical Skills
 
