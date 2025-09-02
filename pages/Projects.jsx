@@ -68,6 +68,8 @@ liveLink="https://mcp-assistant.vercel.app/"
   />
 </div>
 
+
+
 <div className="transform hover:scale-[1.02] transition-all">
           <PerProject
             title="AI Agents"
@@ -76,6 +78,14 @@ liveLink="https://mcp-assistant.vercel.app/"
             skills={["JavaScript", "Node.js", "Express", "LangChain", "Google Generative AI", "APIs", "OpenWeather", "IP Geolocation"]}
           />
         </div>
+        <div className="transform hover:scale-[1.02] transition-all">
+          <PerProject
+            title="Htop-Go"
+            text="A Go learning project : A terminal-based system monitoring tool built in Go, inspired by 'htop'. It provides real-time insights into system performance, including CPU, memory, and process management. The project emphasizes efficient resource usage and a user-friendly interface for monitoring system health."
+            projectLink="https://github.com/Ankritjarngal/htop-go"
+            skills={["Go", "Terminal UI", "System Monitoring", "Concurrency"]}
+          />
+                  </div>
 
         {/* <div className="transform hover:scale-[1.02] transition-all">
           <PerProject
