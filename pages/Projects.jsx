@@ -16,10 +16,7 @@ export function Projects() {
           
       <PerProject
   title="MCP (Model Context Protocol) Assistant"
-  text="
-  **Currenty Working On**
-
-  MCP Assistant is an intelligent, modular AI assistant framework designed around a structured Model Context Protocol (MCP). The system processes user queries by first identifying the underlying intent (e.g., Google Calendar, mailing service, task management more to be added soon) and then enriching the query using contextual data from previous interactions.
+  text="MCP Assistant is an intelligent, modular AI assistant framework designed around a structured Model Context Protocol (MCP). The system processes user queries by first identifying the underlying intent (e.g., Google Calendar, mailing service, task management more to be added soon) and then enriching the query using contextual data from previous interactions.
 
 It utilizes the OpenRouter API with the Meta llama model (Metts LLaMA 3.3) for natural language understanding and dynamic context reasoning. Once the query is contextually enhanced, it is routed to the appropriate agent, which performs the relevant task (e.g., creating calendar events,editing alrady existing events ,rescheduling evens , composing emails). The final response is handled by an action execution layer and returned to the user seamlessly.
 
@@ -42,7 +39,15 @@ liveLink="https://mcp-assistant.vercel.app/"
         
         <div className="transform hover:scale-[1.02] transition-all">
 
-
+        <div className="transform hover:scale-[1.02] transition-transform duration-300">
+  <PerProject
+    title="Mind Space"
+    text="A privacy-first journaling app with on-device encryption. Features a personalized AI chatbot powered by Gemini Pro, tailored to the user's personality. Designed and implemented local storage encryption and prompt engineering for contextual, secure journaling. Built collaboratively in a high-pressure hackathon environment."
+    projectLink="https://github.com/Ankritjarngal/headspace"
+    liveLink="https://headspace-bice.vercel.app/"
+    skills={["React", "Gemini Pro", "AI Integration", "Encryption", "Prompt Engineering", "Hackathon Runner-Up"]}
+  />
+</div>
   <PerProject
     title="Smart Resume Analyzer: Score, Compare & Matching Internships"
     text="AI-powered Resume Evaluator that extracts key details using NLP and NER. Processes PDFs, scores resumes on predefined criteria, and integrates vector-based search with Pinecone for similarity matching. Includes a search feature for finding similar resumes based on skills, education, and experience. Secure storage via Google Drive API. Features automated web scraping to fetch relevant Internshala internships based on extracted skills, allowing users to browse and apply directly."
@@ -70,6 +75,16 @@ liveLink="https://mcp-assistant.vercel.app/"
 
 
 
+
+        <div className="transform hover:scale-[1.02] transition-transform duration-300">
+  <PerProject
+    title="Go Load Balancer"
+    text="A simple, high-performance HTTP load balancer built with Go. It distributes incoming requests across multiple backend servers using a round-robin algorithm. Includes a concurrent health check mechanism to ensure traffic is only routed to healthy servers, improving reliability and uptime."
+    projectLink="https://github.com/Ankritjarngal/load-balancer-in-go"
+    liveLink=""
+    skills={["Go", "Networking", "Concurrency", "HTTP", "Reverse Proxy", "Round Robin"]}
+  />
+</div>
 <div className="transform hover:scale-[1.02] transition-all">
           <PerProject
             title="AI Agents"
@@ -95,6 +110,17 @@ liveLink="https://mcp-assistant.vercel.app/"
             skills={["JavaScript", "Node.js", "Express", "LangChain", "Google Generative AI", "APIs", "OpenWeather", "IP Geolocation"]}
           />
         </div> */}
+        <div className="transform hover:scale-[1.02] transition-all">
+          <PerProject
+            title="Http Server From Scratch In C"
+            text="Developed an HTTP server from scratch in C using WinSock. Supports GET, POST, PUT, and DELETE methods with dynamic request handling. Features  request parsing, and structured logging. Implements  response generation for a reliable web server experience."
+            skills={["C", "WinSock", "HTTP", "Socket Programming", "Networking", "Systems Programming"]}
+            projectLink="https://github.com/Ankritjarngal/http-server-from-scratch-in-c"
+          />
+        </div>
+
+
+
 <div className="transform hover:scale-[1.02] transition-all">
           <PerProject
             title="QR Code Scanner"
@@ -131,14 +157,7 @@ liveLink="https://mcp-assistant.vercel.app/"
             skills={["JavaScript", "Compromise NLP", "Transformers", "Google Gemini AI"]}
           />
         </div>
-        <div className="transform hover:scale-[1.02] transition-all">
-          <PerProject
-            title="Http Server From Scratch In C"
-            text="Developed an HTTP server from scratch in C using WinSock. Supports GET, POST, PUT, and DELETE methods with dynamic request handling. Features  request parsing, and structured logging. Implements  response generation for a reliable web server experience."
-            skills={["C", "WinSock", "HTTP", "Socket Programming", "Networking", "Systems Programming"]}
-            projectLink="https://github.com/Ankritjarngal/http-server-from-scratch-in-c"
-          />
-        </div>
+
 
         
 
