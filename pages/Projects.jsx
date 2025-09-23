@@ -87,20 +87,42 @@ liveLink="https://mcp-assistant.vercel.app/"
 </div>
 <div className="transform hover:scale-[1.02] transition-all">
           <PerProject
-            title="AI Agents"
-            text="Developed an AI-powered chatbot that provides real-time weather and location-based information using LangChain and Google Generative AI. The project integrates multiple APIs for fetching user location and weather conditions, enabling accurate and dynamic responses. It implements an interactive conversational experience with specialized weather assistance. Currently exploring advanced AI integrations and API optimizations."
-            projectLink="https://github.com/Ankritjarngal/AI-agents"
-            skills={["JavaScript", "Node.js", "Express", "LangChain", "Google Generative AI", "APIs", "OpenWeather", "IP Geolocation"]}
-          />
-        </div>
-        <div className="transform hover:scale-[1.02] transition-all">
-          <PerProject
             title="Htop-Go"
             text="A Go learning project : A terminal-based system monitoring tool built in Go, inspired by 'htop'. It provides real-time insights into system performance, including CPU, memory, and process management. The project emphasizes efficient resource usage and a user-friendly interface for monitoring system health."
             projectLink="https://github.com/Ankritjarngal/htop-go"
             skills={["Go", "Terminal UI", "System Monitoring", "Concurrency"]}
           />
                   </div>
+
+                  <div className="transform hover:scale-[1.02] transition-transform duration-300">
+  <PerProject
+    title="Tilted Walking"
+    text="A reinforcement learning agent that learns to balance on a tightrope while being subjected to random wind forces. The project features a custom physics engine and a Gymnasium-compatible environment where a Q-learning agent learns to shift its center of mass to counteract destabilizing torque."
+    projectLink="https://github.com/Ankritjarngal/titled-walking"
+    liveLink=""
+    skills={["Python", "Reinforcement Learning", "Q-Learning", "Gymnasium", "Physics Simulation", "AI"]}
+  />
+</div>
+
+
+<div className="transform hover:scale-[1.02] transition-transform duration-300">
+  <PerProject
+    title="Connect 4 RL Agent"
+    text="An AI agent trained using Q-learning to master the game of Connect 4. The agent learns by playing over 100,000 games against a heuristic opponent, developing strategies to win, block, and achieve draws. The final trained model can be played against in an interactive terminal game."
+    projectLink="https://github.com/Ankritjarngal/connect4-reinforcement"
+    liveLink=""
+    skills={["Python", "Reinforcement Learning", "Q-Learning", "Numpy", "Game AI", "AI"]}
+  />
+</div>
+<div className="transform hover:scale-[1.02] transition-all">
+          <PerProject
+            title="AI Agents"
+            text="Developed an AI-powered chatbot that provides real-time weather and location-based information using LangChain and Google Generative AI. The project integrates multiple APIs for fetching user location and weather conditions, enabling accurate and dynamic responses. It implements an interactive conversational experience with specialized weather assistance. Currently exploring advanced AI integrations and API optimizations."
+            projectLink="https://github.com/Ankritjarngal/AI-agents"
+            skills={["JavaScript", "Node.js", "Express", "LangChain", "Google Generative AI", "APIs", "OpenWeather", "IP Geolocation"]}
+          />
+        </div>
+
 
         {/* <div className="transform hover:scale-[1.02] transition-all">
           <PerProject
