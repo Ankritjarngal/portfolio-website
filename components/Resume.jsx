@@ -1,16 +1,15 @@
 import React, { useState } from "react";
 import { FileText, Download } from "lucide-react";
-import AnkritResume from "/AnkritResume.pdf";
 
 export function Resume() {
   const [isHovered, setIsHovered] = useState(false);
-
+  
   return (
     <button
-      className="flex items-center px-3 py-3 rounded-full 
-        text-gray-300 font-medium transition-all duration-300 
-        hover:bg-white/10 hover:scale-105 active:scale-95 
-        bg-transparent w-max"
+      className="flex items-center px-3 py-3 rounded-full
+       text-gray-300 font-medium transition-all duration-300
+       hover:bg-white/10 hover:scale-105 active:scale-95
+       bg-transparent w-max"
       onClick={downloadResume}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
@@ -29,7 +28,8 @@ export function Resume() {
 }
 
 function downloadResume() {
-  const link = AnkritResume;
+  // Correct way to reference files in public folder
+  const link = "/AnkritResume.pdf";
   const a = document.createElement("a");
   a.href = link;
   a.download = "Ankrit_Jarngal_Resume.pdf";
