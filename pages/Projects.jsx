@@ -8,6 +8,21 @@ export function Projects() {
       <HeaderBox title="Projects" number={2} />
 
       <div className="grid gap-6 sm:gap-8">
+      <div className="transform hover:scale-[1.02] transition-all">
+  <PerProject
+    title="Dungeon Crawler - Multiplayer Roguelike Game Server in Go"
+    text="Currently working on: 
+    Dungeon Crawler is an authoritative multiplayer game server built from scratch in Go, focusing on robust backend architecture and concurrency. The system uses a session-based model to manage multiple, simultaneous game worlds, each driven by a command-based, turn-wise game loop. The decoupled 'dungeon' and 'game' packages are coordinated by the central server, which communicates with clients over WebSockets, demonstrating clean state management and advanced networking patterns.
+
+    The game itself is a cooperative multiplayer roguelike featuring procedural dungeons, a tactical Line of Sight (LOS) combat system, and unique monsters with distinct AI behaviors like territorial guarding and ranged attacks. The project is currently presented in a real-time terminal UI, with a full graphical web-based client actively in development."
+    projectLink="https://github.com/Ankritjarngal/Dungeon-Crawler"
+    skills={["Go (Golang)", "Concurrency", "Networking (WebSockets)", "Game Development", "Procedural Generation", "Game AI", "System Architecture", "Terminal UI"]}
+  />
+</div>
+
+
+
+
 
 
 
@@ -18,7 +33,7 @@ export function Projects() {
   title="MCP (Model Context Protocol) Assistant"
   text="MCP Assistant is an intelligent, modular AI assistant framework designed around a structured Model Context Protocol (MCP). The system processes user queries by first identifying the underlying intent (e.g., Google Calendar, mailing service, task management more to be added soon) and then enriching the query using contextual data from previous interactions.
 
-It utilizes the OpenRouter API with the Meta llama model (Metts LLaMA 3.3) for natural language understanding and dynamic context reasoning. Once the query is contextually enhanced, it is routed to the appropriate agent, which performs the relevant task (e.g., creating calendar events,editing alrady existing events ,rescheduling evens , composing emails). The final response is handled by an action execution layer and returned to the user seamlessly.
+It utilizes the Gemini 2.5 flash API for natural language understanding and dynamic context reasoning. Once the query is contextually enhanced, it is routed to the appropriate agent, which performs the relevant task (e.g., creating calendar events,editing alrady existing events ,rescheduling evens , composing emails). The final response is handled by an action execution layer and returned to the user seamlessly.
 
 This project emphasizes robustness through a stateless design, intelligent fallback handling, and modular architecture. It integrates with real-world services like Google Calendar, Gmail, to create a production-grade assistant capable of understanding vague or multi-step queries with high accuracy
 Will add more services soon."
@@ -27,7 +42,7 @@ projectLink="https://github.com/Ankritjarngal/MCP-assistant"
 liveLink="https://mcp-assistant.vercel.app/"
 
   skills={[
-    "JavaScript", "Node.js", "Express", "OpenRouter API", "Metta llama (Metta LLaMA 3.3)",
+    "JavaScript", "Node.js", "Express", "Gemini 2.5 flash",
     "Intent Recognition", "Context-Aware Query Enhancement", 
     "Google Calendar API", "Gmail API", "Modular Agent Architecture"
   ]}
@@ -124,14 +139,7 @@ liveLink="https://mcp-assistant.vercel.app/"
         </div>
 
 
-        {/* <div className="transform hover:scale-[1.02] transition-all">
-          <PerProject
-            title="HeadSpace"
-            text="Made a personal chatbot assistant with built in journal support with the context awarenress of the journels it uses "
-            projectLink="https://github.com/Ankritjarngal/AI-agents"
-            skills={["JavaScript", "Node.js", "Express", "LangChain", "Google Generative AI", "APIs", "OpenWeather", "IP Geolocation"]}
-          />
-        </div> */}
+        
         <div className="transform hover:scale-[1.02] transition-all">
           <PerProject
             title="Http Server From Scratch In C"
