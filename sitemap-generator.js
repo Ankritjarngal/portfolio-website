@@ -1,10 +1,9 @@
 import { SitemapStream, streamToPromise } from "sitemap";
 import { createWriteStream } from "fs";
 
-const hostname = "https://portfolio-ankrit.vercel.app"; // Change to your actual domain
-
+const hostname = "https://portfolio-ankrit.vercel.app"; 
 const links = [
-  { url: "/", changefreq: "daily", priority: 1.0 } // Only homepage
+  { url: "/", changefreq: "daily", priority: 1.0 } 
 ];
 
 const stream = new SitemapStream({ hostname });
