@@ -21,7 +21,8 @@ Engineered a complete, real-time multiplayer game server from scratch in Go, cen
 The game itself is a classic roguelike experience with a modern UI. On the backend, a procedural dungeon generator uses a Random Walk algorithm to create unique, fully-connected maps on every session start. The world is populated with distinct AI-driven monsters (melee, ranged, high-speed) that feature multi-state behaviors like territorial guarding and Line of Sight (LOS) targeting. The frontend, built in React and styled with Tailwind CSS, features a sprite-based Canvas renderer, a full suite of UI panels (Status, Inventory, Player List, Legend, Log), and a complete input system supporting both keyboard and the Gamepad API for a console-like feel.
     `}
     projectLink="https://github.com/Ankritjarngal/Dungeon-Crawler"
-    skills={["Go (Golang)", "Concurrency", "Networking (WebSockets)", "Game Development", "System Architecture", "Procedural Generation", "Game AI", "ReactJS", "Canvas API", "JavaScript (ES6+)", "Tailwind CSS", "Vite"]}
+    liveLink="https://dungeon-explorer-kappa.vercel.app/"
+    skills={["Go (Golang)", "Concurrency", "Networking (WebSockets)", "Game Development", "System Architecture", "Procedural Generation", "Game AI", "ReactJS", "Tailwind CSS"]}
 />
 
 
