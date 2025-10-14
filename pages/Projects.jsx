@@ -9,15 +9,22 @@ export function Projects() {
 
       <div className="grid gap-6 sm:gap-8">
       <div className="transform hover:scale-[1.02] transition-all">
-  <PerProject
-    title="Dungeon Crawler - Multiplayer Roguelike Game Server in Go"
-    text="Currently working on: 
-    Dungeon Crawler is an authoritative multiplayer game server built from scratch in Go, focusing on robust backend architecture and concurrency. The system uses a session-based model to manage multiple, simultaneous game worlds, each driven by a command-based, turn-wise game loop. The decoupled 'dungeon' and 'game' packages are coordinated by the central server, which communicates with clients over WebSockets, demonstrating clean state management and advanced networking patterns.
+      <PerProject
+    title="Dungeon Crawler - A Full-Stack Multiplayer Roguelike"
+    text={`
+**Architectural Deep Dive:**
 
-    The game itself is a cooperative multiplayer roguelike featuring procedural dungeons, a tactical Line of Sight (LOS) combat system, and unique monsters with distinct AI behaviors like territorial guarding and ranged attacks. The project is currently presented in a real-time terminal UI, with a full graphical web-based client actively in development."
+Engineered a complete, real-time multiplayer game server from scratch in Go, centered around a highly concurrent, session-based architecture. Each game "room" runs as an independent, isolated goroutine, managed by a central server that handles a custom, code-based lobby system for private cooperative play. Communication is handled via a robust WebSocket layer using a custom JSON protocol, with a command-based, turn-wise game loop processing player actions sequentially via channels to guarantee a thread-safe and cheat-resistant game state for up to 5 players per session.
+
+**Gameplay & Feature Implementation:**
+
+The game itself is a classic roguelike experience with a modern UI. On the backend, a procedural dungeon generator uses a Random Walk algorithm to create unique, fully-connected maps on every session start. The world is populated with distinct AI-driven monsters (melee, ranged, high-speed) that feature multi-state behaviors like territorial guarding and Line of Sight (LOS) targeting. The frontend, built in React and styled with Tailwind CSS, features a sprite-based Canvas renderer, a full suite of UI panels (Status, Inventory, Player List, Legend, Log), and a complete input system supporting both keyboard and the Gamepad API for a console-like feel.
+    `}
     projectLink="https://github.com/Ankritjarngal/Dungeon-Crawler"
-    skills={["Go (Golang)", "Concurrency", "Networking (WebSockets)", "Game Development", "Procedural Generation", "Game AI", "System Architecture", "Terminal UI"]}
-  />
+    skills={["Go (Golang)", "Concurrency", "Networking (WebSockets)", "Game Development", "System Architecture", "Procedural Generation", "Game AI", "ReactJS", "Canvas API", "JavaScript (ES6+)", "Tailwind CSS", "Vite"]}
+/>
+
+
 </div>
 
 
