@@ -58,7 +58,24 @@ liveLink="https://mcp-assistant.vercel.app/"
 
 
         </div>
-        
+        <div className="transform hover:scale-[1.02] transition-all">
+  <PerProject
+    title="CodeJudge: AI-Powered Assessment Platform"
+    text="CodeJudge is a secure, intelligent coding examination platform designed to modernize computer science education. It bridges the gap between learning and testing by integrating a Socratic AI Tutor (powered by Gemini Pro) that provides conceptual hints and debugging guidance without revealing direct solutions.
+
+    The platform ensures academic integrity through a strict, automated proctoring system that detects tab switching, window focus loss, and utilizes aggressive polling to prevent cheating. It features a robust code execution engine supporting multiple languages (C, C++, Python, JS) capable of handling multi-line I/O and hidden test cases.
+
+    For instructors, it offers a comprehensive dashboard for creating timed assignments, managing bulk enrollments via CSV, and viewing detailed student performance analytics. The system allows a 'Bring Your Own Key' architecture, making it scalable and cost-effective for institutions."
+
+    projectLink="https://github.com/Ankritjarngal/coding-platform-assignment" 
+
+    skills={[
+      "React.js", "Node.js", "PostgreSQL", "Google Gemini Pro",
+      "Dockerized Sandboxes", "Monaco Editor", "Strict Proctoring",
+      "JWT Authentication", "Real-time Analytics"
+    ]}
+  />
+</div>
         
         <div className="transform hover:scale-[1.02] transition-all">
 
