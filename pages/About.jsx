@@ -8,35 +8,33 @@ export function About() {
         <HeaderBox title="About Me!" number={1} />
         <div className="transform hover:scale-[1.02] transition-all">
           <Written
-            data={`Hi, I'm Ankrit Jarngal, an aspiring web developer from Hirangar, Jammu and Kashmir. I am currently in my 3rd year of the Computer Science program at the National Institute of Technology, Srinagar.
+            data={`Hi, I'm Ankrit Jarngal, a 3rd-year Computer Science student at the National Institute of Technology (NIT), Srinagar.
 
 Technical Skills
 
 Development
-- Frontend: HTML, CSS, JavaScript, ReactJS, TypeScript, Tailwind CSS, NextJS
-- Backend: Node.js, Express, NextJS, HTTP Server Implementation, Socket Programming, Flask
-- Databases: MongoDB, PostgreSQL, Pinecone (Vector Database), Supabase
+- Frontend: HTML, CSS, JavaScript, ReactJS, TypeScript, Tailwind CSS, Next.js
+- Backend: Go (Golang), Node.js, Express, Next.js, FastAPI, Flask
+- Systems: LSM-Trees, HNSW Indexing, WAL, SSTable Compaction, Socket Programming (WinSock)
+- Databases: PostgreSQL, MongoDB, Pinecone (Vector Database), Supabase, Redis
 
 Tools & Infrastructure
 - Version Control: Git, GitHub
-- Cloud Services: Vercel, Cloudinary, Google Drive API, Google Calendar API
-- Authentication: JWT, Next Auth
+- Infrastructure: Docker, Vercel, Cloudinary, Google Drive API, Google Calendar API
+- Authentication: JWT, Next Auth, Zod Validation
 
 AI & Machine Learning
-- NLP Technologies: LangChain, Transformers, Compromise NLP
-- Techniques: Named Entity Recognition, Vector Embeddings, Sentiment Analysis, Intent Analysis
-- Platforms: Google Generative AI, Gemini AI, Hugging Face
+- Vector Engineering: Custom Vector Engines (GopherVectra), Vector Embeddings, RAG
+- NLP Technologies: LangChain, Gemini AI, Google Generative AI, Transformers
+- Techniques: Intent Recognition, Named Entity Recognition, Sentiment Analysis
 
 Additional Expertise
-- API Development: RESTful APIs, API Integration
+- API Development: RESTful APIs, WebSockets (Real-time), API Integration
 - Data Processing: Web Scraping (Puppeteer, Cheerio), PDF Parsing
-- Systems Programming: C, WinSock, Networking
-- Middleware: Authentication, Authorization, Request Validation
-- Libraries: Zod, JWT, CORS, Express-Session, Multer
-- Error Handling: Custom Error Responses, Async Error Handling
+- Low-Level: C, Networking, Concurrent Game Engines, Load Balancers
+- Error Handling: Custom Error Responses, Async Error Handling, Middleware Design
 
-I am passionate about building responsive websites and web applications, always eager to learn and grow in the field of web development.
-
+I focus on building high-performance concurrent applications and low-level system infrastructure.
 `}
           />
         </div>
