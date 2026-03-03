@@ -11,18 +11,19 @@ export function Projects() {
         
         {/* --- GOPHERVECTRA: ADDED MORE DETAIL --- */}
         <div className="transform hover:scale-[1.02] transition-all">
-          <PerProject
-            title="GopherVectra: High-Performance Vector Database Engine"
-            text="Engineered a specialized vector database from the ground up in Go, designed to handle high-dimensional embeddings (768D) with an emphasis on durability and low-latency retrieval. The storage layer follows a Log-Structured Merge-Tree (LSM-Tree) design, implementing a Write-Ahead Log (WAL) for fault tolerance and a thread-safe Memtable that flushes to disk as immutable SSTables once capacity is reached. A background 'Janitor' goroutine performs multi-level compaction, merging Level 0 segments into optimized Level 1 files to reduce file descriptor overhead.
+  <PerProject
+    title="GopherVectra: High-Performance Vector Database Engine"
+    text="Engineered a vector database from scratch in Go for high-dimensional embeddings (768D) with an emphasis on durability and low-latency retrieval. The storage layer implements a Log-Structured Merge-Tree (LSM-Tree) with a Write-Ahead Log (WAL) for crash recovery, a thread-safe Memtable that flushes to immutable SSTables on disk, and a background compactor goroutine performing multi-level compaction to merge and deduplicate files across storage levels. Each SSTable is paired with a custom Bloom filter (double-hashing FNV-64a) to eliminate unnecessary disk I/O on lookups.
 
-            The search engine utilizes a Hierarchical Navigable Small World (HNSW) graph, implementing multi-layered probability distributions to achieve O(log N) approximate nearest neighbor search. To ensure 100% mathematical reliability, I integrated a dual-mode search path that allows users to toggle between HNSW and a Brute-Force flat scan, achieving a perfect 1.0 recall score during validation. The system features built-in vector normalization and cosine similarity metrics, wrapped in a concurrent REST API built with Go's sync.RWMutex primitives."
-            projectLink="https://github.com/Ankritjarngal/gopher-vectra"
-            skills={[
-              "Go (Golang)", "LSM-Tree Architecture", "HNSW Graph Indexing", "Concurrency (Mutexes)", 
-              "Write-Ahead Logging (WAL)", "SSTable Compaction", "Vector Math", "REST API", "Docker"
-            ]}
-          />
-        </div>
+The search engine uses a Hierarchical Navigable Small World (HNSW) graph with probabilistic layer assignment for O(log N) approximate nearest neighbor search. The implementation includes correct neighbor pruning using the diversity heuristic from the original paper, a monotonic node ID counter to prevent collision after deletions, and a two-heap search traversal (min-heap for candidates, worst-heap for results) that replaced a naive sort-on-every-iteration approach. A dual-mode search path allows toggling between HNSW and brute-force flat scan for recall validation — achieving 100% recall at Ef=40. Performance benchmarks on 1000 vectors with 10 concurrent users showed an 8x throughput improvement (5 → 39.74 QPS) and latency reduction from ~2000ms to ~247ms after targeted optimizations."
+    projectLink="https://github.com/Ankritjarngal/gopher-vectra"
+    skills={[
+      "Go (Golang)", "LSM-Tree Architecture", "HNSW Graph Indexing", "Bloom Filters",
+      "Write-Ahead Logging (WAL)", "SSTable Compaction", "Concurrency (sync.RWMutex)", 
+      "Vector Math", "REST API"
+    ]}
+  />
+</div>
 
         {/* --- DUNGEON CRAWLER: RESTORED FULL DETAIL --- */}
         <div className="transform hover:scale-[1.02] transition-all">
