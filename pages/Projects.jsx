@@ -4,7 +4,7 @@ import { PerProject } from '../components/PerProject';
 
 export function Projects() {
   return (
-    <div className="px-4 sm:px-0">
+    <div className="w-full max-w-3xl px-4 sm:px-0">
       <HeaderBox title="Projects" number={16} />
 
       <div className="grid gap-6 sm:gap-8">

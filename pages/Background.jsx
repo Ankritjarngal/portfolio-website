@@ -9,7 +9,7 @@ export function Background({children}) {
   return (
     <div
       onMouseMove={change}
-      className="relative min-h-screen overflow-auto bg-[#1A202C] overflow-x-hidden"
+      className="relative min-h-screen bg-[#1A202C] overflow-x-hidden"
     >
       <div
         style={{

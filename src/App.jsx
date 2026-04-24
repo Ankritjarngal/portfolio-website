@@ -10,12 +10,12 @@ import debounce from "lodash.debounce";
 
 export default function App() {
   const [preLoader, setPreLoader] = useState(true);
-  const [largeScreen, setLargeScreen] = useState(window.innerWidth > 786);
+  const [largeScreen, setLargeScreen] = useState(window.innerWidth >= 768);
   const [sideBar, setSideBar] = useState(false);
   const [button, setButton] = useState(!largeScreen);
 
   const handleResize = debounce(() => {
-    setLargeScreen(window.innerWidth > 786);
+    setLargeScreen(window.innerWidth >= 768);
   }, 250);
 
   useEffect(() => {
@@ -23,15 +23,6 @@ export default function App() {
     const timer = setTimeout(() => {
       setPreLoader(false);
     }, 1800);
-    return () => clearTimeout(timer);
-  }, []);
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      if (window.innerWidth > 786) {
-        setSideBar(true);
-      }
-    }, 100);
     return () => clearTimeout(timer);
   }, []);
 
@@ -72,11 +63,11 @@ export default function App() {
   }
 
   return (
-    <div className="relative flex min-h-screen bg-[#1A202C]">
+    <div className="relative flex min-h-screen overflow-x-hidden bg-[#1A202C]">
       {/* Sidebar */}
       <div
         className={`fixed left-0 top-0 h-full bg-[#1A202C] transform transition-transform duration-300 ease-in-out
-          w-22 select-none cursor-default sm:w-3/12 md:w-2/12 xl:w-[12%] z-20
+          w-[78vw] max-w-xs select-none cursor-default md:w-56 lg:w-60 xl:w-64 z-20
           ${sideBar ? "translate-x-0" : "-translate-x-full"}`}
         onClick={handleSidebarClick}
       >
@@ -84,7 +75,7 @@ export default function App() {
       </div>
 
       {/* Main Content */}
-      <div className={`flex-1 transition-all duration-300 ${sideBar ? "ml-12 sm:ml-[25%] md:ml-[16.67%] xl:ml-[12%]" : ""}`}>
+      <div className={`flex-1 min-w-0 transition-all duration-300 ${largeScreen ? "md:ml-56 lg:ml-60 xl:ml-64" : ""}`}>
         <Background>
           {/* Topbar and Toggle Button */}
           <div id="contact" className="transition-transform duration-500 select-none cursor-default">
@@ -104,25 +95,25 @@ export default function App() {
           </div>
 
           {/* Page Sections */}
-          <div className="w-full overflow-x-hidden">
-            <div className="flex flex-wrap justify-between">
+          <div className="w-full overflow-x-hidden pb-6 sm:pb-8">
+            <div className="mx-auto flex w-full max-w-[1400px] flex-col gap-6 px-4 sm:px-6 lg:px-10">
               {/* About - Right aligned */}
-              <div id="about" className="w-full md:max-w-3xl mt-6 flex justify-end ml-auto mr-6">
+              <div id="about" className="mt-6 flex w-full justify-end">
                 <About />
               </div>
 
               {/* Projects - Left aligned */}
-              <div id="projects" className="w-full md:max-w-3xl mt-6 flex justify-start ml-6">
+              <div id="projects" className="mt-6 flex w-full justify-start">
                 <Projects />
               </div>
 
               {/* Experience - Right aligned */}
-              <div id="experience" className="w-full md:max-w-3xl mt-6 flex justify-end ml-auto mr-6">
+              <div id="experience" className="mt-6 flex w-full justify-end">
                 <Experience />
               </div>
             </div>
 
-            {/* Footer */}
+            {/* Footer spans full main-content width */}
             <div id="footer" className="mt-6 w-full">
               <Footer />
             </div>
