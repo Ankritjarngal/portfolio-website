@@ -40,5 +40,26 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Bebas Neue', sans-serif; /* Bold, eye-catching font */
+  font-family: 'Sora', sans-serif; /* Modern, geometric display font */
+  letter-spacing: -0.02em;
+  font-weight: 700;
+}
+
+/* Expandable detail-view modal animations */
+@keyframes modalOverlayIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes modalPanelIn {
+  from { opacity: 0; transform: translateY(16px) scale(0.98); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.animate-modal-overlay {
+  animation: modalOverlayIn 0.2s ease-out;
+}
+
+.animate-modal-panel {
+  animation: modalPanelIn 0.25s ease-out;
 }
